@@ -1,3 +1,3 @@
 ECE264
-This is not a test push, it is a real push.
+This may be a test push, or a real push.
 ======
