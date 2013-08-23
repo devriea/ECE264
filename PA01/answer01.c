@@ -134,5 +134,33 @@ int countNegative(int * array, int length)
 */
 int isIncreasing(int * array, int length)
 {
-    return 0;
+   int i;
+   int j = 0;
+   int myLenChk = 0;
+   int myIsInc = 0;
+   
+   if(length == 1 || length == 0)
+   {
+      myIsInc = 1;
+   }
+   
+   if(length > 1)
+   {
+     for(i = 1; i < length; i++)
+     {
+	    if(array[j] < array[i])
+	    {
+	      myLenChk++;
+	    }
+	    j++;
+	  }  
+	
+	  if(myLenChk == (length - 1))
+	  {
+	    myIsInc = 1;
+	  }
+	}
+	
+	return myIsInc;
+
 }
