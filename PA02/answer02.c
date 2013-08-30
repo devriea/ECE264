@@ -144,6 +144,22 @@ void my_strncpy(char * s1, const char * s2, int num)
  */
 void my_strcat(char * s1, const char * s2) 
 {
+  int i = 0;
+  int j = 0;
+
+  while(s1[i] != '\0')
+    {
+      i++;
+    }
+
+  while(s2[j] != '\0')
+    {
+      s1[i] = s2[j];
+      i++;
+      j++;
+    }
+
+  s1[i] = '\0';
     
 }
 
@@ -158,7 +174,23 @@ void my_strcat(char * s1, const char * s2)
  */
 void my_strncat(char * s1, const char * s2, int num)
 {
-   
+  int i = 0;
+  int j = 0;
+
+  while(s1[i] != '\0')
+    {
+      i++;
+    }
+
+  while((s2[j] != '\0') && (j < num))
+    {
+      s1[i] = s2[j];
+      i++;
+      j++;
+    }
+
+  s1[i] = '\0';
+
 }
 
 /**
@@ -173,7 +205,27 @@ void my_strncat(char * s1, const char * s2, int num)
 
 const char *my_strstr(const char * s1, const char * s2)
 {
-    return NULL;
+  int i = 0;
+  int j = 0;
+  const char * myPtr = NULL;
+
+  for(i = 0; s1[i] != '\0'; i++)
+    {
+      if(s2[0] == s1[i])
+        {
+          for(j=0; (s2[j] == s1[i+j]); j++)
+            {
+              if(s2[j+1] == '\0')
+                {
+                  myPtr = &s1[i];
+                  return myPtr;
+                }
+            }
+        }
+    }
+    
+  return myPtr;
+            
 }
 
 
@@ -206,6 +258,41 @@ const char *my_strstr(const char * s1, const char * s2)
  */
 void my_strinsert(char *s1, const char *s2, int pos)
 {
+  int myLen = 0;
+  int myLen2 = 0;
+  int i = 0;
+  int j = 0;
+
+  while(s1[myLen] != '\0')
+  {
+    myLen++;
+  }
+
+  while(s2[myLen2] != '\0')
+  {
+    myLen2++;
+  }
+
+  if(pos >= myLen)
+  {
+    for(i = myLen; s2[j] != '\0'; i++)
+    {
+      s1[i] = s2[j];
+      j++;
+    }
+
+    s1[i+1] = '\0';
+
+    return;
+  }
+
+  for(i = pos; (i-pos) < myLen2; i++)
+  {
+    s1[i + myLen2] = s1[i];
+    s1[i] = s2[i-pos];
+  }
+
+  s1[myLen+myLen2+1] = '\0';
   
 }
 
@@ -241,6 +328,26 @@ void my_strinsert(char *s1, const char *s2, int pos)
  */
 void my_strdelete(char *s, int pos, int length)
 {
+  int myLen = 0;
+  int i = 0;
   
+  for(i = 0; s[i] != '\0'; i++)
+  {
+    myLen++;
+  }
+
+  if(pos >= myLen)
+  {
+    return;
+  }
+  
+
+  for(i = pos; (((i - pos) < length) && (s[i] != '\0')); i++)
+  {
+    s[i] = s[i+length];
+  }
+  
+  s[pos + length] = '\0';
+ 
 }
 
