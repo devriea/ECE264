@@ -273,6 +273,14 @@ void my_strinsert(char *s1, const char *s2, int pos)
     myLen2++;
   }
 
+  for(i = pos; (i-pos) < myLen2; i++)
+  {
+    s1[i + myLen2] = s1[i];
+    s1[i] = s2[i-pos];
+  }
+
+  s1[myLen+myLen2+1] = '\0';
+  
   if(pos >= myLen)
   {
     for(i = myLen; s2[j] != '\0'; i++)
@@ -285,15 +293,6 @@ void my_strinsert(char *s1, const char *s2, int pos)
 
     return;
   }
-
-  for(i = pos; (i-pos) < myLen2; i++)
-  {
-    s1[i + myLen2] = s1[i];
-    s1[i] = s2[i-pos];
-  }
-
-  s1[myLen+myLen2+1] = '\0';
-  
 }
 
 /**
