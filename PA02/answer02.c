@@ -258,10 +258,13 @@ const char *my_strstr(const char * s1, const char * s2)
  */
 void my_strinsert(char *s1, const char *s2, int pos)
 {
+  //printf("s1: %s\ns2: %s\npos: %d\n", s1, s2, pos);
+  
   int myLen = 0;
   int myLen2 = 0;
   int i = 0;
   int j = 0;
+  int myLentooff = 0;
 
   while(s1[myLen] != '\0')
   {
@@ -273,14 +276,6 @@ void my_strinsert(char *s1, const char *s2, int pos)
     myLen2++;
   }
 
-  for(i = pos; (i-pos) < myLen2; i++)
-  {
-    s1[i + myLen2] = s1[i];
-    s1[i] = s2[i-pos];
-  }
-
-  s1[myLen+myLen2+1] = '\0';
-  
   if(pos >= myLen)
   {
     for(i = myLen; s2[j] != '\0'; i++)
@@ -289,10 +284,25 @@ void my_strinsert(char *s1, const char *s2, int pos)
       j++;
     }
 
-    s1[i+1] = '\0';
+    s1[i] = '\0';
 
     return;
   }
+
+  myLentooff = myLen - pos;
+
+  for(i = myLen-1; i >= pos; i--)
+  {
+    s1[i + myLen2] = s1[i];
+  }
+
+  for(i = 0; i < myLen2; i++)
+  {
+    s1[i+pos] = s2[i];
+  }
+
+  s1[myLen+myLen2] = '\0';
+
 }
 
 /**
@@ -339,6 +349,12 @@ void my_strdelete(char *s, int pos, int length)
   {
     return;
   }
+
+  if((pos + length) >= myLen)
+  {
+    s[pos] = '\0';
+    return;
+  }
   
 
   for(i = pos; (((i - pos) < length) && (s[i] != '\0')); i++)
@@ -346,7 +362,7 @@ void my_strdelete(char *s, int pos, int length)
     s[i] = s[i+length];
   }
   
-  s[pos + length] = '\0';
+  s[myLen - (pos + length)] = '\0';
  
 }
 
