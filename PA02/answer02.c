@@ -357,7 +357,7 @@ void my_strdelete(char *s, int pos, int length)
   }
   
 
-  for(i = pos; (((i - pos) < length) && (s[i] != '\0')); i++)
+  for(i = pos; s[i+length] != '\0'; i++)
   {
     s[i] = s[i+length];
   }
