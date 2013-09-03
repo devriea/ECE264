@@ -1,1 +1,0 @@
-obj/pa02.o: pa02.c pa02.h \
