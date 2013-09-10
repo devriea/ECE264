@@ -62,7 +62,25 @@
 
 int * readIntegers(const char * filename, int * numberOfIntegers)
 {
+  FILE *fp;
+  //int i = 0;
+  
+  fp = fopen(filename, "r");
+
+  if(fp == NULL)
+  {
     return NULL;
+  }
+
+  fseek(fp, 0, SEEK_END);
+  *numberOfIntegers = ftell(fp);
+  
+
+  
+
+  printf("\n%i", *numberOfIntegers);
+    
+  return numberOfIntegers;
 }
 
 /**
@@ -153,7 +171,7 @@ void sort(int * arr, int length)
  */
 int search(int * arr, int length, int key)
 {
-    return -1;
+    return 1;
 }
 
 
