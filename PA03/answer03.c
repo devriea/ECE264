@@ -136,26 +136,6 @@ int * readIntegers(const char * filename, int * numberOfIntegers)
  * sort.
  *
  */
-void sort(int * arr, int length)
-{
-  int myPivot = 0;
-  int myInd1 = 0;
-  int myInd2 = 1;
-  int myTemp = 0;
-
-  myPivot = arr[0];
-  
-  while(myInd1 != length)
-  {
-    if(arr[myInd2] < myPivot)
-    {
-      myTemp = arr[myInd1];
-      arr[myInd1] = arr[myInd2];
-      arr[myInd2] = myTemp;
-
-    
-}
-
 void swap(int * arr, int myInd1, int myInd2)
 {
   int myTemp;
@@ -168,21 +148,38 @@ void placePivot(int * arr, int low, int high)
 {
   int myPivotInd = low;
   int myPivot = arr[low];
-  int myLeft = low;
   int myRight = high;
   
-  while(arr[myRight] >= myPivot && (myLeft < myRight))
-  {
-    myRight--;
-  }
-  while(arr[myLeft] <= myPivot && (myLeft < myRight))
-  {
-    myLeft++;
-  }
-  if(myLeft < myRight)
-  {
-    swap(arr, myLeft, myRight);
-  }
+  while(myRight > myPivotInd)
+    {
+      if(arr[myRight] <= myPivot)
+	{
+	  swap(arr, myPivotInd, myPivotInd + 1);
+	  myPivotInd = myPivotInd + 1;
+	  if(myPivotInd != myRight)
+	    {
+	      swap(arr, myPivotInd-1, myRight);
+	    }
+	}
+      else
+	{
+	  myRight--;
+	}
+    }
+     
+  if(high > low)
+    {
+      placePivot(arr, low, myPivotInd-1);
+      placePivot(arr, myPivotInd+1, high); 
+    }
+
+  return;   
+}
+
+void sort(int * arr, int length)
+{
+  placePivot(arr, 0, length-1);
+}
 
 /**
  * Use binary search to find 'key' in a sorted array of integers
@@ -228,9 +225,33 @@ void placePivot(int * arr, int low, int high)
  * }
  * return -1;
  */
+
+int searchhelper(int * arr, int low, int high, int key)
+{
+  if(low > high)
+    {
+      return -1;
+    }
+
+  int ind = (high+low)/2;
+
+  if(arr[ind] == key)
+    {
+      return ind;
+    }
+
+  if(arr[ind] < key)
+    {
+      return searchhelper(arr, ind + 1, high, key);
+    }
+
+  return searchhelper(arr, low, ind - 1, key);
+
+}
+
 int search(int * arr, int length, int key)
 {
-    return 1;
+  return searchhelper(arr, 0,length, key);
 }
 
 
