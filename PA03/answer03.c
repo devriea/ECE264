@@ -63,24 +63,40 @@
 int * readIntegers(const char * filename, int * numberOfIntegers)
 {
   FILE *fp;
-  //int i = 0;
+  int i = 0;
+  int myInput = 0;
   
   fp = fopen(filename, "r");
 
-  if(fp == NULL)
+  if(fp == NULL)   //if the file doesn't open correctly it returns NULL
   {
     return NULL;
   }
-
-  fseek(fp, 0, SEEK_END);
-  *numberOfIntegers = ftell(fp);
   
-
+  while(fscanf(fp, "%d", &myInput) != EOF)
+  {
+    i++;
+  }
   
+  *numberOfIntegers = i;
 
-  printf("\n%i", *numberOfIntegers);
+  i = 0;
+
+  int * ptr = malloc(*numberOfIntegers);
+
+  fseek(fp, 0, SEEK_SET);  
+
+  while(fscanf(fp, "%d", &myInput) != EOF)
+  {
+    ptr[i] = myInput;
+    i++;
+  }
+  
+  //printf("\n\nMy Array is: %d %d %d\n\n", ptr[0], ptr[1], ptr[2]);
+  
+  //printf("\n\nThe number of Integers is: %i\n\n", *numberOfIntegers);
     
-  return numberOfIntegers;
+  return ptr;
 }
 
 /**
@@ -122,8 +138,51 @@ int * readIntegers(const char * filename, int * numberOfIntegers)
  */
 void sort(int * arr, int length)
 {
+  int myPivot = 0;
+  int myInd1 = 0;
+  int myInd2 = 1;
+  int myTemp = 0;
+
+  myPivot = arr[0];
+  
+  while(myInd1 != length)
+  {
+    if(arr[myInd2] < myPivot)
+    {
+      myTemp = arr[myInd1];
+      arr[myInd1] = arr[myInd2];
+      arr[myInd2] = myTemp;
+
     
 }
+
+void swap(int * arr, int myInd1, int myInd2)
+{
+  int myTemp;
+  myTemp = arr[myInd1];
+  arr[myInd1] = arr[myInd2];
+  arr[myInd2] = myTemp;
+}
+
+void placePivot(int * arr, int low, int high)
+{
+  int myPivotInd = low;
+  int myPivot = arr[low];
+  int myLeft = low;
+  int myRight = high;
+  
+  while(arr[myRight] >= myPivot && (myLeft < myRight))
+  {
+    myRight--;
+  }
+  while(arr[myLeft] <= myPivot && (myLeft < myRight))
+  {
+    myLeft++;
+  }
+  if(myLeft < myRight)
+  {
+    swap(arr, myLeft, myRight);
+  }
 
 /**
  * Use binary search to find 'key' in a sorted array of integers
