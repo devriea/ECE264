@@ -81,8 +81,10 @@ int * readIntegers(const char * filename, int * numberOfIntegers)
   *numberOfIntegers = i;
 
   i = 0;
+  
+  printf("\nNumber of Integers: %d\n", *numberOfIntegers);
 
-  int * ptr = malloc(*numberOfIntegers);
+  int * ptr = malloc(*numberOfIntegers * sizeof(int));
 
   fseek(fp, 0, SEEK_SET);  
 
@@ -90,6 +92,10 @@ int * readIntegers(const char * filename, int * numberOfIntegers)
   {
     ptr[i] = myInput;
     i++;
+    if(i < 0 || i > *numberOfIntegers)
+      {
+	printf("\nwriting integers out of bounds\n");
+      }
   }
   
   //printf("\n\nMy Array is: %d %d %d\n\n", ptr[0], ptr[1], ptr[2]);
@@ -139,6 +145,11 @@ int * readIntegers(const char * filename, int * numberOfIntegers)
 void swap(int * arr, int myInd1, int myInd2)
 {
   int myTemp;
+  
+  if(myInd1 < 0 || myInd2 < 0)
+    {
+      printf("\nswapping out of bounds\n");
+    }
   myTemp = arr[myInd1];
   arr[myInd1] = arr[myInd2];
   arr[myInd2] = myTemp;
@@ -158,6 +169,7 @@ void placePivot(int * arr, int low, int high)
 	  myPivotInd = myPivotInd + 1;
 	  if(myPivotInd != myRight)
 	    {
+	      //printf("\nswapinputs: %d, %d\n", myPivotInd-1, myRight);
 	      swap(arr, myPivotInd-1, myRight);
 	    }
 	}
@@ -251,7 +263,7 @@ int searchhelper(int * arr, int low, int high, int key)
 
 int search(int * arr, int length, int key)
 {
-  return searchhelper(arr, 0,length, key);
+  return searchhelper(arr, 0,length-1, key);
 }
 
 
