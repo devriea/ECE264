@@ -1,0 +1,146 @@
+commit 84aad0506b6fc6bac57ba69899bdd457e0f4ca52
+Author: Alexander John DeVries <devriea@ecelinux42.ecn.purdue.edu>
+Date:   Wed Sep 11 16:15:21 2013 -0400
+
+    2013_09_11 16:15 PA03 DONE
+
+commit bc89bb73d91383bb91138aafe700071900c5813c
+Author: Alexander John DeVries <devriea@ecelinux42.ecn.purdue.edu>
+Date:   Tue Sep 10 19:33:44 2013 -0400
+
+    2013_09_10 19:33
+    PA03 should be done except for memory errors
+
+commit d4834034550dbcef157dfc28a6525c25f37792eb
+Author: Alexander John DeVries <devriea@ecelinux42.ecn.purdue.edu>
+Date:   Tue Sep 10 19:32:45 2013 -0400
+
+    2013_09_10 19:33
+    PA03 should be done except for memory errors
+
+commit 2631dd105a5e1a551c39743f44172a52e16ec58b
+Author: Alexander John DeVries <devriea@ecelinux42.ecn.purdue.edu>
+Date:   Tue Sep 10 19:31:40 2013 -0400
+
+    2013_09_10 19:32
+    PA03 is done except for memory errors
+
+commit 90514544e924fd72eb1c4ff3b346672dbb6f5bc7
+Author: Alexander John DeVries <devriea@ecelinux25.ecn.purdue.edu>
+Date:   Tue Sep 10 16:21:10 2013 -0400
+
+    2013_09_10 16:21
+
+commit a9fe4678370698ac40f171b7050a1d720b1d62f2
+Author: Alexander John DeVries <devriea@ecelinux25.ecn.purdue.edu>
+Date:   Tue Sep 10 12:36:14 2013 -0400
+
+    2013_09_10 12:36
+
+commit 0bb4495c746e3c03250167eaf097ae172de7a525
+Author: Alexander John DeVries <devriea@ecelinux25.ecn.purdue.edu>
+Date:   Tue Sep 3 14:06:11 2013 -0400
+
+    2013_09_03 14:06
+
+commit c37bc7412d2170d65461746e4642ef7de2ba9e1e
+Author: Alexander John DeVries <devriea@ecelinux25.ecn.purdue.edu>
+Date:   Sat Aug 31 18:38:35 2013 -0400
+
+    2013_08_31 18:38 EST
+
+commit eadc926453e5fe9005fb8b223ab9e22579d659af
+Author: Alexander John DeVries <devriea@ecelinux25.ecn.purdue.edu>
+Date:   Sat Aug 31 17:14:00 2013 -0400
+
+    2013_08_31 17:13 EST
+
+commit cd509f23480525da7f823bbd64d5e141d8272564
+Author: Alexander John DeVries <devriea@ecelinux25.ecn.purdue.edu>
+Date:   Sat Aug 31 17:11:50 2013 -0400
+
+    2013_08_31 17:12 EST
+
+commit 55af392174435c54a24a7e7ac774fac74574bee6
+Author: Alexander John DeVries <devriea@ecelinux25.ecn.purdue.edu>
+Date:   Fri Aug 30 01:18:25 2013 -0400
+
+    2013_08_30 1:18
+
+commit 18eea7e6fb79df79bbb37919c30c32ced94a596f
+Author: Alexander John DeVries <devriea@ecelinux25.ecn.purdue.edu>
+Date:   Fri Aug 30 01:03:26 2013 -0400
+
+    2013_08_30 1:06
+
+commit e9d0faeecc0c8adc2e48ab67e92dd5b28ea30272
+Author: Alexander John DeVries <devriea@ecelinux07.ecn.purdue.edu>
+Date:   Thu Aug 29 16:20:53 2013 -0400
+
+    2013_08_29 16:21
+
+commit 8d6cc931e501e018a7561907b16eb0cb5d96f0b7
+Author: Alexander John DeVries <devriea@ecelinux25.ecn.purdue.edu>
+Date:   Fri Aug 23 00:11:41 2013 -0400
+
+    readme 0:11
+
+commit 92ead0a07a32500c020701a209f6deda619cf82c
+Author: Alexander John DeVries <devriea@ecelinux25.ecn.purdue.edu>
+Date:   Thu Aug 22 23:26:08 2013 -0400
+
+    11:2611:2611:2611:2611:2611:2611:2611:2611:2611:2611:26
+
+commit b6670bc6dc859729e6481bbf64cc0f7683be0825
+Author: Alexander John DeVries <devriea@ecelinux25.ecn.purdue.edu>
+Date:   Thu Aug 22 22:45:36 2013 -0400
+
+    Hw01 2013_08_22 22:45
+
+commit f279799aa6b38200a0dc29a587ceff0b971b3838
+Author: Alexander John DeVries <devriea@ecegrid-lnx.ecn.purdue.edu>
+Date:   Thu Aug 22 19:06:31 2013 -0400
+
+    Hw01 7:00pm
+
+commit c1ccea65584c675ab4461311f1b7014634634e1d
+Author: Alexander John DeVries <devriea@ecegrid-lnx.ecn.purdue.edu>
+Date:   Thu Aug 22 18:20:47 2013 -0400
+
+    MSEE 189 TEST
+
+commit 8ca4026fe49eb6e0f991237e0ac01d9d2c70a1c9
+Author: Alexander John DeVries <devriea@ecelinux25.ecn.purdue.edu>
+Date:   Wed Aug 21 16:11:33 2013 -0400
+
+    post password change commit
+
+commit 7ab0fac7e60b7e89dd67dfc8995b141abd46dc6d
+Author: Alexander John DeVries <devriea@ecelinux25.ecn.purdue.edu>
+Date:   Wed Aug 21 15:49:02 2013 -0400
+
+    adding new assignment
+
+commit 44ddbf4a3b7159e3f1bdd688a5420cbf57441a10
+Author: Alexander John DeVries <devriea@ecelinux25.ecn.purdue.edu>
+Date:   Tue Aug 20 21:18:06 2013 -0400
+
+    9:18 test Update
+
+commit 7ab861b2e43bebd43f1055fd1475472f1f17e51a
+Author: Alexander John DeVries <devriea@ecelinux25.ecn.purdue.edu>
+Date:   Tue Aug 20 21:12:05 2013 -0400
+
+    Test commit
+
+commit 65629af144b2bfed236aa69e57e9ae42cb99e311
+Author: Alexander John DeVries <devriea@ecelinux25.ecn.purdue.edu>
+Date:   Tue Aug 20 14:54:18 2013 -0400
+
+    add a new line
+
+commit 768936c18e6eeb5d20948b6b3bdb844087057e33
+Author: devriea <adevries528@gmail.com>
+Date:   Sun Aug 11 18:15:32 2013 -0700
+
+    Initial commit
