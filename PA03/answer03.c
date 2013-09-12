@@ -92,15 +92,7 @@ int * readIntegers(const char * filename, int * numberOfIntegers)
   {
     ptr[i] = myInput;
     i++;
-    if(i < 0 || i > *numberOfIntegers)
-      {
-	printf("\nwriting integers out of bounds\n");
-      }
   }
-  
-  //printf("\n\nMy Array is: %d %d %d\n\n", ptr[0], ptr[1], ptr[2]);
-  
-  //printf("\n\nThe number of Integers is: %i\n\n", *numberOfIntegers);
     
   return ptr;
 }
@@ -145,11 +137,6 @@ int * readIntegers(const char * filename, int * numberOfIntegers)
 void swap(int * arr, int myInd1, int myInd2)
 {
   int myTemp;
-  
-  if(myInd1 < 0 || myInd2 < 0)
-    {
-      printf("\nswapping out of bounds\n");
-    }
   myTemp = arr[myInd1];
   arr[myInd1] = arr[myInd2];
   arr[myInd2] = myTemp;
@@ -169,7 +156,6 @@ void placePivot(int * arr, int low, int high)
 	  myPivotInd = myPivotInd + 1;
 	  if(myPivotInd != myRight)
 	    {
-	      //printf("\nswapinputs: %d, %d\n", myPivotInd-1, myRight);
 	      swap(arr, myPivotInd-1, myRight);
 	    }
 	}
