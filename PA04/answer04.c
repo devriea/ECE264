@@ -110,6 +110,7 @@ void partitionAll(int value)
  *
  */
 
+/*
 int sumArray(int* arr, int length)
 {
   int i = 0;
@@ -123,58 +124,34 @@ int sumArray(int* arr, int length)
   return mySum;
 }
 
-void partitionIncreasingHelper(int* arr, int length, int value)
-{
-  int myLastVal = arr[length-1];
-  int mySum = 0;
-  int myDiff = 0;
+*/
 
-  if(length == 1)
+void printPartition(int* arr, int length)
+{
+  int ind;
+  for (ind = 0; ind < length - 1; ind ++)
     {
+      printf("%d + ", arr[ind]);
+    }
+  printf("%d\n", arr[length - 1]);
+}
+
+
+void partitionIncreasingHelper(int* arr, int ind, int left)
+{
+  int val;
+  if (left == 0)
+    {
+      printPartition(arr, ind);
       return;
     }
-
-  if(myLastVal == arr[length-2]+1)
+  for(val = 1; val <= left; val++)
     {
-      arr[length-1] = 0;
-      arr[length-2] = arr[length-2] + myLastVal;
-      printArray(arr, length-1);
-      partitionIncreasingHelper(arr, length-1, value);
-    }
-  else if((arr[length-2] + 1) < ((myLastVal-1)/2)-1)
-    {
-      arr[length-2] = arr[length-2] + 1;
-      arr[length-1] = arr[length-2] + 1;
-      mySum = sumArray(arr, length);
-      do
+      if(((ind > 0) && (val > arr[ind-1])) || (ind == 0))
 	{
-	  if(mySum > value)
-	    {
-	      printf("ERROR!");
-	    }
-	  else if(mySum < value)
-	    {
-	      myDiff = value - mySum;
-	      if(myDiff > arr[length-1])
-		{
-		  arr[length] = arr[length-1] + 1;
-		  length++;
-		}
-	      else
-		{
-		  arr[length-1] = arr[length-1] + myDiff;
-		}
-	    }
-	}while(mySum < value);
-      printArray(arr, length);
-      partitionIncreasingHelper(arr, length, value);
-    }
-  else
-    {
-      arr[length-2] = arr[length-2] + 1;
-      arr[length-1] = arr[length-1] - 1;
-      printArray(arr, length);
-      partitionIncreasingHelper(arr, length, value);
+	  arr[ind] = val;
+	  partitionIncreasingHelper(arr, ind + 1, left - val);
+	}
     }
 }
 
@@ -183,36 +160,8 @@ void partitionIncreasing(int value)
   printf("partitionIncreasing %d\n", value);
 
   int myArr[MAXLENGTH];
-  int i = 0;
-  int mySum = 0;
-  int myDiff = 0;
 
-  myArr[i] = 1;
-
-  mySum = sumArray(myArr, 1);
-
-  myDiff = value - mySum;
-
-  while(mySum != value)
-    {
-      if(myArr[i] + 1 <= myDiff)
-	{
-	  i++;
-	  myArr[i] = myArr[i-1] + 1;
-	  mySum = sumArray(myArr, i+1);
-	  myDiff = value - mySum;
-	}
-      else
-	{
-	  myArr[i] = myArr[i] + myDiff;
-	  mySum = sumArray(myArr, i+1);
-	  myDiff = value - mySum;
-	}
-    }
-
-  printArray(myArr, i+1);
-
-  partitionIncreasingHelper(myArr, i+1, value);
+  partitionIncreasingHelper(myArr, 0, value);
 
 }
 
@@ -235,11 +184,31 @@ void partitionIncreasing(int value)
  *
  */
 
+void partitionDecreasingHelper(int* arr, int ind, int left)
+{
+  int val;
+  if (left == 0)
+    {
+      printPartition(arr, ind);
+      return;
+    }
+  for(val = left; val >= 1; val--)
+    {
+      if(((ind > 0) && (val < arr[ind-1])) || (ind == 0))
+	{
+	  arr[ind] = val;
+	  partitionDecreasingHelper(arr, ind + 1, left - val);
+	}
+    }
+}
 
 void partitionDecreasing(int value)
 {
   printf("partitionDecreasing %d\n", value);
   
+  int myArr[MAXLENGTH];
+
+  partitionDecreasingHelper(myArr, 0, value);
 
 }
 
