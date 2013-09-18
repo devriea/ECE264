@@ -17,7 +17,6 @@
 #include <stdlib.h>
 
 
-
 /*
  * =================================================================
  * This function prints all partitions of a positive integer value
@@ -129,6 +128,9 @@ int sumArray(int* arr, int length)
 void printPartition(int* arr, int length)
 {
   int ind;
+
+  printf("= ");
+
   for (ind = 0; ind < length - 1; ind ++)
     {
       printf("%d + ", arr[ind]);
@@ -229,10 +231,32 @@ void partitionDecreasing(int value)
  * generates invalid partitions and checks validity before printing.
  */
 
+void partitionOddHelper(int* arr, int ind, int left)
+{
+  int val;
+  if (left == 0)
+    {
+      printPartition(arr, ind);
+      return;
+    }
+  for(val = 1; val <= left; val++)
+    {
+      if(val % 2 == 1)
+	{
+	  arr[ind] = val;
+	  partitionOddHelper(arr, ind + 1, left - val);
+	}
+    }
+}
+
 
 void partitionOdd(int value)
 {
   printf("partitionOdd %d\n", value);
+
+  int myArr[MAXLENGTH];
+
+  partitionOddHelper(myArr, 0, value);
 }
 
 /*
@@ -254,15 +278,37 @@ void partitionOdd(int value)
  * generates invalid partitions and checks validity before printing.
  */
 
+void partitionEvenHelper(int* arr, int ind, int left)
+{
+  int val;
+  if (left == 0)
+    {
+      printPartition(arr, ind);
+      return;
+    }
+  for(val = 1; val <= left; val++)
+    {
+      if(val % 2 == 0)
+	{
+	  arr[ind] = val;
+	  partitionEvenHelper(arr, ind + 1, left - val);
+	}
+    }
+}
+
 void partitionEven(int value)
 {
   printf("partitionEven %d\n", value);
+
+  int myArr[MAXLENGTH];
+
+  partitionEvenHelper(myArr, 0, value);
 
 }
 
 /*
  * =================================================================
- * This function prints alternate ood and even number partitions of a positive integer value. Each partition starts from and odd number, even number, ood number again, even number again...etc.
+ * This function prints alternate ood and even number partitions of a positive integer value. Each partition starts from and odd number, even number, odd number again, even number again...etc.
  *
  * For example, if value is 6
  * 1 + 2 + 1 + 2 and
@@ -278,10 +324,31 @@ void partitionEven(int value)
  * generates invalid partitions and checks validity before printing.
  */
 
+void partitionOddAndEvenHelper(int* arr, int ind, int left, int myFlag)
+{
+  int val;
+  if (left == 0)
+    {
+      printPartition(arr, ind);
+      return;
+    }
+  for(val = 1; val <= left; val++)
+    {
+      if(((myFlag == 1) && (val % 2 == 1)) || ((myFlag == 0) && (val % 2 == 0)))
+	{
+	  arr[ind] = val;
+	  partitionOddAndEvenHelper(arr, ind + 1, left - val, abs(myFlag - 1));
+	}
+    }
+}
 
 void partitionOddAndEven(int value)
 {
   printf("partitionOddAndEven %d\n", value);
+
+  int myArr[MAXLENGTH];
+
+  partitionOddAndEvenHelper(myArr, 0, value, 1);
   
 }
 
@@ -301,10 +368,49 @@ void partitionOddAndEven(int value)
  * generates invalid partitions and checks validity before printing.
  */
 
+int isPrime(int value)
+{
+  if(value <= 1)
+    {
+      return 0;
+    }
+
+  int i = 0;
+  
+  for(i = 2; i*2 <= value; i++)
+    {
+      if(value % i == 0)
+	{
+	  return 0;
+	}
+    }
+  return 1;
+}
+
+void partitionPrimeHelper(int* arr, int ind, int left)
+{
+  int val;
+  if (left == 0)
+    {
+      printPartition(arr, ind);
+      return;
+    }
+  for(val = 1; val <= left; val++)
+    {
+      if(isPrime(val))
+	{
+	  arr[ind] = val;
+	  partitionPrimeHelper(arr, ind + 1, left - val);
+	}
+    }
+}
 
 
 void partitionPrime(int value)
 {
   printf("partitionPrime %d\n", value);
 
+  int myArr[MAXLENGTH];
+
+  partitionPrimeHelper(myArr, 0, value);
 }
