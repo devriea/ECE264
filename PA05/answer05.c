@@ -191,12 +191,14 @@ char * * readString(char * filename, int * numString)
   fseek(fp, 0, SEEK_SET);  
 
   while(fgets(buffer, MAXIMUM_LENGTH, fp) != NULL)
-  {
-    char * temp = malloc(sizeof(buffer) * sizeof(char));
-    strcpy(temp, buffer);
-    ptr[i] = temp;
-    i++;
-  }
+    {
+      //allocates memory for however big buffer is
+      char * temp = malloc(sizeof(buffer) * sizeof(char));
+      //copies the string instead of just passing the pointer
+      strcpy(temp, buffer);
+      ptr[i] = temp;
+      i++;
+    }
 
   fclose(fp);
     
@@ -361,9 +363,16 @@ void sortInteger(int * arrInteger, int numInteger)
  *
  */
 
+static int cmpstring(const void * p1, const void * p2)
+{
+  return strcmp( * (char * const *) p1, * (char * const *) p2);
+}
 
 void sortString(char * * arrString, int numString)
 {
+
+  qsort(arrString, numString, sizeof(char * *), cmpstring);
+
 }
 
 
