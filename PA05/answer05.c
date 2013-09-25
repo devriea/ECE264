@@ -60,9 +60,41 @@
  * 
  *
  */
-
 int * readInteger(char * filename, int * numInteger)
 {
+  FILE *fp;
+  int i = 0;
+  int myInput = 0;
+  
+  fp = fopen(filename, "r");
+
+  if(fp == NULL)   //if the file doesn't open correctly it returns NULL
+  {
+    return NULL;
+  }
+  
+  while(fscanf(fp, "%d", &myInput) != EOF)
+  {
+    i++;
+  }
+  
+  *numInteger = i;
+
+  i = 0;
+
+  int * ptr = malloc(*numInteger * sizeof(int));
+
+  fseek(fp, 0, SEEK_SET);  
+
+  while(fscanf(fp, "%d", &myInput) != EOF)
+  {
+    ptr[i] = myInput;
+    i++;
+  }
+
+  fclose(fp);
+    
+  return ptr;
 }
 
 /* ----------------------------------------------- */
@@ -133,6 +165,41 @@ int * readInteger(char * filename, int * numInteger)
 
 char * * readString(char * filename, int * numString)
 {
+
+  FILE *fp;
+  int i = 0;
+  char buffer[MAXIMUM_LENGTH];
+  
+  fp = fopen(filename, "r");
+
+  if(fp == NULL)   //if the file doesn't open correctly it returns NULL
+  {
+    return NULL;
+  }
+  
+  while(fgets(buffer, MAXIMUM_LENGTH , fp) != NULL)
+  {
+    i++;
+  }
+  
+  *numString = i;
+
+  i = 0;
+
+  char * * ptr = malloc(*numString * sizeof(char)); //also times by MAXIMUM_LENGTH?
+
+  fseek(fp, 0, SEEK_SET);  
+
+  while(fscanf(fp, "%s", buffer) != EOF)
+  {
+    ptr[i] = buffer;
+    i++;
+  }
+
+  fclose(fp);
+    
+  return ptr;
+
 }
 
 /* ----------------------------------------------- */
@@ -141,6 +208,13 @@ char * * readString(char * filename, int * numString)
  */
 void printInteger(int * arrInteger, int numInteger)
 {
+  int i = 0;
+
+  for(i=0; i<numInteger; i++)
+    {
+      printf("%d\n", arrInteger[i]);
+    }
+  
 }
 
 /* ----------------------------------------------- */
@@ -151,6 +225,12 @@ void printInteger(int * arrInteger, int numInteger)
  */
 void printString(char * * arrString, int numString)
 {
+  int i = 0;
+
+  for(i=0; i<numString; i++)
+    {
+      printf("%s\n", arrString[i]);
+    }
 }
 
 /* ----------------------------------------------- */
@@ -159,6 +239,7 @@ void printString(char * * arrString, int numString)
  */
 void freeInteger(int * arrInteger, int numInteger)
 {
+  free(arrInteger);
 }
 
 /* ----------------------------------------------- */
@@ -169,6 +250,12 @@ void freeInteger(int * arrInteger, int numInteger)
  */
 void freeString(char * * arrString, int numString)
 {
+  int i = 0;
+
+  for(i=0; i<numString; i++)
+    {
+      free(arrString[i]);
+    }
 }
 
 /* ----------------------------------------------- */
@@ -191,6 +278,23 @@ void freeString(char * * arrString, int numString)
 
 int saveInteger(char * filename, int * arrInteger, int numInteger)
 {
+  FILE * fp;
+  int i = 0;
+
+  fp = fopen(filename, "w");
+  if(fp == NULL)
+    {
+      return 0;
+    }
+  
+  for(i=0; i<numInteger; i++)
+    {
+      fprintf(fp, "%d\n", arrInteger[i]);
+    }
+  
+  fclose(fp);
+
+  return 1;
 }
 
 /* ----------------------------------------------- */
@@ -213,6 +317,23 @@ int saveInteger(char * filename, int * arrInteger, int numInteger)
 
 int saveString(char * filename, char * * arrString, int numString)
 {
+  FILE * fp;
+  int i = 0;
+
+  fp = fopen(filename, "w");
+  if(fp == NULL)
+    {
+      return 0;
+    }
+
+  for(i=0; i<numString; i++)
+    {
+      fprintf(fp, "%s\n", arrString[i]);
+    }
+
+  fclose(fp);
+
+  return 1;
 }
 
 /* ----------------------------------------------- */
