@@ -177,7 +177,7 @@ char * * readString(char * filename, int * numString)
     return NULL;
   }
   
-  while(fgets(buffer, MAXIMUM_LENGTH , fp) != NULL)
+  while(fgets(buffer, MAXIMUM_LENGTH, fp) != NULL)
   {
     i++;
   }
@@ -186,13 +186,15 @@ char * * readString(char * filename, int * numString)
 
   i = 0;
 
-  char * * ptr = malloc(*numString * sizeof(char)); //also times by MAXIMUM_LENGTH?
+  char * * ptr = malloc(MAXIMUM_LENGTH * *numString * sizeof(char));
 
   fseek(fp, 0, SEEK_SET);  
 
-  while(fscanf(fp, "%s", buffer) != EOF)
+  while(fgets(buffer, MAXIMUM_LENGTH, fp) != NULL)
   {
-    ptr[i] = buffer;
+    char * temp = malloc(sizeof(buffer) * sizeof(char));
+    strcpy(temp, buffer);
+    ptr[i] = temp;
     i++;
   }
 
