@@ -233,7 +233,7 @@ void printString(char * * arrString, int numString)
 
   for(i=0; i<numString; i++)
     {
-      printf("%s\n", arrString[i]);
+      printf("%s", arrString[i]);
     }
 }
 
@@ -257,9 +257,11 @@ void freeString(char * * arrString, int numString)
   int i = 0;
 
   for(i=0; i<numString; i++)
-    {
-      free(arrString[i]);
-    }
+  {
+    free(arrString[i]);
+   }
+
+  free(arrString);
 }
 
 /* ----------------------------------------------- */
@@ -332,7 +334,7 @@ int saveString(char * filename, char * * arrString, int numString)
 
   for(i=0; i<numString; i++)
     {
-      fprintf(fp, "%s\n", arrString[i]);
+      fprintf(fp, "%s", arrString[i]);
     }
 
   fclose(fp);
@@ -348,8 +350,17 @@ int saveString(char * filename, char * * arrString, int numString)
  *
  */
 
+static int cmpint(const void * a, const void * b)
+{
+  int *myIntA = (int *) a;
+  int *myIntB = (int *) b;
+
+  return *myIntA - *myIntB;
+}
+
 void sortInteger(int * arrInteger, int numInteger)
 {
+  qsort(arrInteger, numInteger, sizeof(int), cmpint); 
 }
 
 
