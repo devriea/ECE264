@@ -183,6 +183,8 @@ struct Image * loadImage(const char* filename)
 
   if(fp == NULL)   //if the file doesn't open correctly it returns NULL
     {
+      fclose(fp);
+      free(header);
       return NULL;
     }
 
@@ -190,6 +192,8 @@ struct Image * loadImage(const char* filename)
   
   if(flag != 4 ||header[0] != 557069874 || header[1] <= 0 || header[2] <= 0 || header[3] <= 0)
     {
+      fclose(fp);
+      free(header);
       return NULL;
     }
 
@@ -201,23 +205,78 @@ struct Image * loadImage(const char* filename)
 
   if(myComment == NULL)
     {
+      fclose(fp);
+      free(header);
+      free(myComment);
       return NULL;
     }
 
   flag = fread(myComment, myComLen, 1, fp); 
   
-  if(flag != myComLen)
+  if(flag != 1)
     {
+      fclose(fp);
+      free(header);
+      free(myComment);
       return NULL;
     }
 
-  int * myData = malloc(myWidth * myHeight * sizeof(uint8_t));
+  uint8_t * myData = malloc(myWidth * myHeight * sizeof(uint8_t));
   
+  if(myData == NULL)
+    {
+      fclose(fp);
+      free(header);
+      free(myComment);
+      free(myData);
+      return NULL;
+    }
+
+  flag = fread(myData, myWidth * sizeof(uint8_t), myHeight, fp);
+
+  if(flag != myHeight)
+    {
+      fclose(fp);
+      free(header);
+      free(myComment);
+      free(myData);
+      return NULL;
+    }  
+
+  uint8_t * myTest = malloc(sizeof(uint8_t));
+
+  if(myTest == NULL)
+    {
+      fclose(fp);
+      free(header);
+      free(myComment);
+      free(myData);
+      free(myTest);
+      return NULL;
+    }
+
+  flag = fread(myTest, sizeof(uint8_t), 1, fp);
+
+  if(flag == 1)
+    {
+      fclose(fp);
+      free(header);
+      free(myComment);
+      free(myData);
+      free(myTest);
+      return NULL;
+    }
+
+  struct Image * myImage;
+
+  *myImage.width = myWidth;
+  *myImage.height = myHeight;
+  *myImage.comment = myComment;
+  *myImage.data = myData;
   
-  free(header);
-  free(myComment);
-  fclose(fp);     
-  return NULL;
+  fclose(fp);
+  
+  return myImage;
 
 }
 
