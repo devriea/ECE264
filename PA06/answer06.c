@@ -172,7 +172,53 @@
  */
 struct Image * loadImage(const char* filename)
 {
-    return NULL;
+  FILE * fp;
+  int * header = malloc(4 * sizeof(int));
+  int flag = 0;
+  int myComLen = 0;
+  int myWidth = 0;
+  int myHeight = 0;
+  
+  fp = fopen(filename, "r");
+
+  if(fp == NULL)   //if the file doesn't open correctly it returns NULL
+    {
+      return NULL;
+    }
+
+  flag = fread(header, 4, 4, fp);
+  
+  if(flag != 4 ||header[0] != 557069874 || header[1] <= 0 || header[2] <= 0 || header[3] <= 0)
+    {
+      return NULL;
+    }
+
+  myWidth = header[1];
+  myHeight = header[2];
+  myComLen = header[3];
+  
+  char * myComment = malloc(myComLen);
+
+  if(myComment == NULL)
+    {
+      return NULL;
+    }
+
+  flag = fread(myComment, myComLen, 1, fp); 
+  
+  if(flag != myComLen)
+    {
+      return NULL;
+    }
+
+  int * myData = malloc(myWidth * myHeight * sizeof(uint8_t));
+  
+  
+  free(header);
+  free(myComment);
+  fclose(fp);     
+  return NULL;
+
 }
 
 
