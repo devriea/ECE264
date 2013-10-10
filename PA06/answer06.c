@@ -213,7 +213,7 @@ struct Image * loadImage(const char* filename)
 
   flag = fread(myComment, myComLen, 1, fp); 
   
-  if(flag != 1)
+  if((flag != 1) || (myComment[myComLen-1] != '\0'))
     {
       fclose(fp);
       free(header);
@@ -267,14 +267,16 @@ struct Image * loadImage(const char* filename)
       return NULL;
     }
 
-  struct Image * myImage;
+  struct Image * myImage = malloc(sizeof(struct Image));
 
-  *myImage.width = myWidth;
-  *myImage.height = myHeight;
-  *myImage.comment = myComment;
-  *myImage.data = myData;
+  (*myImage).width = myWidth;
+  (*myImage).height = myHeight;
+  (*myImage).comment = myComment;
+  (*myImage).data = myData;
   
   fclose(fp);
+  free(header);
+  free(myTest);
   
   return myImage;
 
@@ -293,7 +295,12 @@ struct Image * loadImage(const char* filename)
  */
 void freeImage(struct Image * image)
 {
-
+  if(image != NULL)
+    {
+      free((*image).comment);
+      free((*image).data);
+      free(image);
+    }
 }
 
 /*
@@ -322,6 +329,27 @@ void freeImage(struct Image * image)
  */
 void linearNormalization(struct Image * image)
 {
+  int myDatasize = (*image).width * (*image).height;
+  int myMin = (*image).data[0];
+  int myMax = (*image).data[0];
+  int i = 0;
+
+  for(i = 0; i < myDatasize; i++)
+    {
+      if((*image).data[i] < myMin)
+	{
+	  myMin = (*image).data[i];
+	}
+      if((*image).data[i] > myMax)
+	{
+	  myMax = (*image).data[i];
+	}
+    }
+
+  for(i = 0; i < myDatasize; i++)
+    {
+      (*image).data[i] = ((*image).data[i] - myMin) * 255.0 / (myMax - myMin);
+    }
 
 }
 
