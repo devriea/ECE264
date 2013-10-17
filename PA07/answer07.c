@@ -3,7 +3,7 @@
 #include <stdlib.h>
 
 /**
- * Prints a linked-list "head" into the output fie "out"
+ * Prints a linked-list "head" into the output file "out"
  *
  * NOTE: we have given the code for this function
  */
@@ -35,6 +35,27 @@ void List_print(FILE * out, Node * head)
  */
 void List_destroy(Node * head)
 {
+  if(head == NULL)
+  {
+    return;
+  }
+
+  Node * temp_head;
+  temp_head = head;
+
+  Node * del_next;
+  del_next = temp_head -> next;
+
+  while(del_next != NULL)
+  {
+    temp_head -> next = del_next -> next;
+  
+    free(del_next);
+
+    del_next = temp_head -> next;
+  }
+
+  free(temp_head);
 
 }
 
@@ -53,8 +74,13 @@ void List_destroy(Node * head)
  */
 Node * List_create(int value, int index)
 {
+  Node * head = NULL;
+  head = malloc(sizeof(Node));
+  head -> next = NULL;
+  head -> value = value;
+  head -> index = index;
 
-    return NULL;
+  return head;
 }
 
 /**
@@ -83,9 +109,99 @@ Node * List_create(int value, int index)
  * You need to insert nodes in ascending order by index.
  * See the notes to "List_insert_ascend"
  */
+
+void findNextIndex (int * value, int * index, int length, int * prevIndex, int * prevValue)
+{
+  int i = 0;
+  int myNextIndex = 0;
+  int myNextValue = value[0];
+  
+  for(i = 0; i < length; i++)
+  {
+    if((index[i] < *prevIndex) && (index[i] > myNextIndex))
+    {
+      myNextIndex = index[i];
+      myNextValue = value[i];
+    }
+  }
+
+  *prevIndex = myNextIndex;
+  *prevValue = myNextValue;
+
+}
+
+int array_Consolidation(int * value, int * index, int length)
+{
+  int i = 0;
+  int j = 0;
+  int myNewLength = length;
+
+  for(i = 0; i < length; i++)
+  {
+    for(j = 0; j < length; j++)
+    {
+      if((i != j) && (index[j] == index[i]))
+      {
+        myNewLength--;
+
+        if(i < j)
+        {
+          value[i] = value[i] + value[j];
+          index[j] = -1;
+          value[j] = 0;
+        }
+        else
+        {
+          value[j] = value[i] + value[j];
+          index[i] = -1;
+          value[i] = 0;
+        }
+      }
+    }
+  }
+
+  return myNewLength;
+
+}
+  
+
 Node * List_build(int * value, int * index, int length)
 {
-    return NULL;
+  int i = 0;
+  int myIndex = index[0];
+  int myValue = value[0];
+  int myLength = 0;
+  Node * head = NULL;
+  
+  if(length == 0)
+  {
+    return head;
+  }
+
+  myLength = array_Consolidation(value, index, length);
+
+  for(i = 0; i < length; i++)
+  {
+    if(index[i] > myIndex)
+    {
+      myIndex = index[i];
+      myValue = value[i];
+    }
+  }
+
+  head = List_create(myValue, myIndex);
+
+  if(length > 1)
+  {
+    for(i = 1; i < myLength; i++)
+    {
+      findNextIndex(value, index, length, &myIndex, &myValue);
+      head = List_insert_ascend(head, myValue, myIndex);
+    }
+  }
+
+  return head;
+ 
 }
 
 
@@ -110,7 +226,12 @@ Node * List_build(int * value, int * index, int length)
  */
 Node * List_insert_ascend(Node * head, int value, int index)
 {
-    return NULL;
+  Node * child = NULL;
+  child = malloc(sizeof(Node));
+  child -> next = head;
+  child -> value = value;
+  child -> index = index;
+  return child;
 }
 
 
@@ -126,7 +247,31 @@ Node * List_insert_ascend(Node * head, int value, int index)
  */
 Node * List_delete(Node * head, int index)
 {
-    return NULL;
+  Node * myNewHead = NULL;
+  Node * myDelHead = NULL;
+  Node * myTempHead = NULL;
+
+  if(head -> index == index)
+  {
+    myNewHead = head -> next;
+    free(head);
+    return myNewHead;
+  }
+
+  myTempHead = head;
+  
+  while(myTempHead -> next -> index != index)
+  {
+    myTempHead = myTempHead -> next;
+  }
+  
+  myDelHead = myTempHead -> next;
+  myTempHead -> next = myDelHead -> next;
+
+  free(myDelHead);
+
+  return head;
+
 }
 
 /**
@@ -148,7 +293,52 @@ Node * List_delete(Node * head, int index)
  */
 Node * List_copy(Node * head)
 {
-    return NULL;
+  int i = 0;
+  int j = 0;
+  Node * myHead = head;
+
+  while(myHead != NULL)
+  {
+    i++;
+    myHead = myHead -> next;
+  }
+
+  int * myVals = malloc(sizeof(int) * i);
+  int * myInds = malloc(sizeof(int) * i);
+  
+  myHead = head;
+  
+  while(myHead != NULL)
+  {
+    myVals[j] = myHead -> value;
+    myInds[j] = myHead -> index;
+    j++;
+    myHead = myHead -> next;
+  }
+
+  myHead = List_build(myVals, myInds, i);
+
+  free(myVals);
+  free(myInds);
+
+  return myHead;
+
+
+  /*
+  Node * myHead = NULL;
+  myHead  = malloc(sizeof(Node));
+  myHead -> value = head -> value;
+  myHead -> index = head -> index;
+  myHead -> next = NULL;
+  head = head -> next;
+  while(head != NULL)
+  {
+    Node * myNextHead = NULL;
+    myNextHead = malloc(sizeof(Node));
+    myNextHead -> value = head -> value;
+    myNextHead -> index = head -> index;
+    myNextHead 
+  */
 }
 
 
@@ -172,8 +362,114 @@ Node * List_copy(Node * head)
  * This function should not modify either "head1" or "head2". You only
  * need to make a clone of "head1".
  */
+Node * List_insert(Node * head1, Node * toBeInserted)
+{
+  Node * nextTBI = toBeInserted -> next;
+  
+  toBeInserted -> next = head1 -> next;
+  head1 -> next = toBeInserted;
+  return nextTBI;
+}
+ 
+
 Node * List_merge(Node * head1, Node * head2)
 {
-    return NULL;
+  Node * hat = NULL;
+  Node * head_copy = NULL;
+  Node * head2_backup = NULL;
+
+  if(head1 != NULL)
+  {
+    head_copy = List_copy(head1);
+    hat = head_copy;
+  }
+  
+  if(head2 != NULL)
+  {
+    head2_backup = List_copy(head2);
+  }
+
+    while((head_copy != NULL) || (head2 != NULL))
+    {
+      if((head_copy != NULL) && (head2 != NULL))
+      {
+        if(head_copy -> index > head2 -> index)
+        {
+          Node * temp1 = head2 -> next;
+          head2 -> next = head_copy;
+          head_copy = head2;
+          head2 = temp1;
+          hat = head_copy;
+        }
+        else if(head_copy -> index < head2 -> index)
+        {
+          if(head2 -> index >= head_copy -> next -> index)
+          {
+            head_copy = head_copy -> next;
+          }
+          else
+          {
+            head2 = List_insert(head_copy, head2);
+          }
+        }
+        else
+        {
+          head_copy -> value = head_copy -> value + head2 -> value;
+          //head_copy = head_copy -> next;
+          if(head_copy -> value == 0)
+          {
+            if(hat == head_copy)
+            {
+              head_copy = List_delete(hat, head_copy -> index);
+              hat = head_copy;
+            }
+            else
+            {
+              head_copy = List_delete(hat, head_copy -> index);
+            }
+          }
+          head2 = head2 -> next;
+        }
+        if((head_copy != NULL) && (head_copy -> next == NULL))
+        {
+          if(head_copy -> index == head2 -> index)
+          {
+            head_copy -> value = head_copy -> value + head2 -> value;
+            if(head_copy -> value == 0)
+            {
+              if(hat == head_copy)
+              {
+                head_copy = List_delete(hat, head_copy -> index);
+                hat = head_copy;
+              }
+              else
+              {
+                head_copy = List_delete(hat, head_copy -> index);
+              }
+            }
+          }
+          else
+          {
+            head_copy -> next = head2;
+          }
+          head2 = head2_backup;
+          return hat;
+        }
+      }
+      else if((head_copy != NULL) && (head2 == NULL))
+      {
+        head2 = head2_backup;
+        return hat;
+      }
+      else if((head_copy == NULL) && (head2 != NULL))
+      {
+        //printf("\n\n ERROR \n\n");
+        hat = List_copy(head2);
+        head2 = head2_backup;
+        return hat;
+      }
+    }
+  head2 = head2_backup;
+  return hat;  
 }
 

@@ -6,7 +6,7 @@ Given below is the general information regarding Sparse Arrays:
 "Consider a data structure called a sparse array: most elements of a
 sparse array are 0. This means that most elements do not need to be
 stored in the array. Only the elements whose values are non-zero are
-stored. In a C program, a normal array of size N occupies a continuous
+stored. In a C program, a normal array of size N occupies a contiguous
 piece of memory allocated for indexes from 0 to N − 1. It would be
 inefficient to store a sparse array in a normal C array because most
 space is wasted. Instead, you can use a data structure that stores
