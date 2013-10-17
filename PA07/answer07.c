@@ -175,14 +175,19 @@ int array_Consolidation(int * value, int * index, int length)
 Node * List_build(int * value, int * index, int length)
 {
   int i = 0;
-  int myIndex = index[0];
-  int myValue = value[0];
+  int myIndex = 0;
+  int myValue = 0;
   int myLength = 0;
   Node * head = NULL;
   
   if(length == 0)
     {
       return head;
+    }
+  else
+    {
+      myIndex = index[0];
+      myValue = value[0];
     }
 
   myLength = array_Consolidation(value, index, length);
@@ -419,15 +424,20 @@ Node * List_remZeros(Node * head)
 
 Node * List_merge(Node * head1, Node * head2)
 {
-  Node * head_copy = List_copy(head1);
+  Node * head_copy = NULL;
   Node * myMList = NULL;
+
+  if(head1 != NULL)
+  {
+    head_copy = List_copy(head1);
+  }
   
   if(head2 == NULL)
   {
     myMList = head_copy;
   }
 
-  if(head1 == NULL)
+  if((head1 == NULL) && (head2 != NULL))
   {
     myMList = List_copy(head2);
   }
