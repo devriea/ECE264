@@ -115,7 +115,7 @@ SparseNode *SparseArray_build(int * indicies, int * values, int length)
 
   for(i = 0; i < length; i++)
     {
-      myNode = SparseArray_insert(myNode, values[i], indicies[i]);
+      myNode = SparseArray_insert(myNode, indicies[i], values[i]);
     }
   
   return myNode;
@@ -139,18 +139,16 @@ void SparseNode_destroy( SparseNode * array)
 
 void destroy_helper(SparseNode * array)
 {
-  if((array -> left == NULL) && (array -> right == NULL))
-    {
-      SparseNode_destroy(array);
-    }
-  else if(array -> left != NULL)
+  if(array -> left != NULL)
     {
       destroy_helper(array -> left);
     }
-  else
+  if(array -> right != NULL)
     {
       destroy_helper(array -> right);
     }
+
+  SparseNode_destroy(array);
 
   return;
 }
@@ -327,14 +325,20 @@ SparseNode * SparseArray_remove ( SparseNode * array, int index )
       else if((array -> right != NULL) && (array -> left != NULL))
 	{
 	  SparseNode * myTemp = NULL;
+	  int tValue = 0;
+	  int tIndex = 0;
 	  myTemp = array -> right;
 	  while(myTemp -> left != NULL)
 	    {
 	      myTemp = myTemp -> left;
 	    }
+	  tValue = array -> value;
+	  tIndex = array -> index;
 	  array -> value = myTemp -> value;
 	  array -> index = myTemp -> index;
-	  free(myTemp);
+	  myTemp -> value = tValue;
+	  myTemp -> index = tIndex;
+	  array -> right = SparseArray_remove(array -> right, index);
 	  return array;
 	}
     }
@@ -369,6 +373,9 @@ SparseNode * copyNodeHelper(SparseNode * array)
     }
 
   SparseNode * myTemp = SparseNode_create(array -> index, array -> value);
+  myTemp -> left = array -> left;
+  myTemp -> right = array -> right;
+
   return myTemp;
 }
 
@@ -419,10 +426,126 @@ SparseNode * SparseArray_copy(SparseNode * array)
  * 
  * Hint: you may write new functions
  */
+SparseNode * myMerge_helper(SparseNode * array, int index, int value)
+{
+  if(array == NULL)
+    {
+      return SparseNode_create(index, value);
+    }
+  if(array -> index == index)
+    {
+      array -> value = array -> value + value;
+    }
+  if(array -> index > index)
+    {
+     array -> left = myMerge_helper(array -> left, index, value);
+    }
+  if(array -> index < index)
+    {
+      array -> right = myMerge_helper(array -> right, index, value);
+    }
+  
+  return array;
+}
+
+SparseNode * myMerge_runner(SparseNode * myMerge, SparseNode * array2)
+{
+  if(array2 -> left != NULL)
+    {
+      myMerge = myMerge_runner(myMerge, array2 -> left);
+    }
+  if(array2 -> right != NULL)
+    {
+      myMerge = myMerge_runner(myMerge, array2 -> right);
+    }
+
+  myMerge = myMerge_helper(myMerge, array2 -> index, array2 -> value);
+
+  return myMerge;
+}
+
+int count_zeroes(SparseNode * array)
+{
+  int i = 0;
+  if(array -> left != NULL)
+    {
+      i += count_zeroes(array -> left);
+    }
+  if(array -> right != NULL)
+    {
+      i += count_zeroes(array -> right);
+    }
+  if(array -> value == 0)
+    {
+      i++;
+    }
+  return i;
+}
+
+void get_zero_ind(SparseNode * array, int * zeroInd, int ind)
+{
+  if(array -> left != NULL)
+    {
+      get_zero_ind(array -> left, zeroInd, ind);
+    }
+  if(array -> right != NULL)
+    {
+      get_zero_ind(array -> right, zeroInd, ind);
+    }
+  if(array -> value == 0)
+    {
+      zeroInd[ind] = array -> index;
+      ind++;
+    }
+}
+
+SparseNode * rem_zeroes(SparseNode * array)
+{
+  int numZeroes = 0;
+  int i = 0;
+
+  numZeroes = count_zeroes(array);
+
+  int * myZeroInd = malloc(sizeof(int) * numZeroes);
+
+  get_zero_ind(array, myZeroInd, 0);
+
+  for(i = 0; i < numZeroes; i++)
+    {
+      array = SparseArray_remove(array, myZeroInd[i]);
+    }
+  
+  free(myZeroInd);
+
+  return array;
+}
 
 SparseNode * SparseArray_merge(SparseNode * array_1, SparseNode * array_2)
 {
+  SparseNode * myMerge = NULL;
 
-  return NULL;
+  if(array_1 == NULL)
+    {
+      if(array_2 == NULL)
+	{
+	  return NULL;
+	}
+
+      myMerge = SparseArray_copy(array_2);
+      return myMerge;
+    }
+  
+  myMerge = SparseArray_copy(array_1);
+
+  if(array_2 == NULL)
+    {
+      return myMerge;
+    }
+
+  myMerge = myMerge_runner(myMerge, array_2);
+
+  myMerge = rem_zeroes(myMerge);
+
+  return myMerge;
 
 }
