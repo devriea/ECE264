@@ -55,7 +55,10 @@ SparseNode * SparseArray_insert ( SparseNode * array, int index, int value )
     }
   else if(array -> index == index)
     {
-      array -> value = value;
+      if(value != 0)
+        {
+          array -> value = value;
+        }
     }
   else if(array -> index > index)
     {
@@ -351,7 +354,7 @@ SparseNode * SparseArray_remove ( SparseNode * array, int index )
       array -> right = SparseArray_remove(array -> right, index);
     }
 
-  return NULL;
+  return array;
 }
 
 /* The function makes a copy of the input sparse array tree
@@ -482,7 +485,7 @@ int count_zeroes(SparseNode * array)
   return i;
 }
 
-void get_zero_ind(SparseNode * array, int * zeroInd, int ind)
+void get_zero_ind(SparseNode * array, int * zeroInd, int * ind)
 {
   if(array -> left != NULL)
     {
@@ -494,21 +497,22 @@ void get_zero_ind(SparseNode * array, int * zeroInd, int ind)
     }
   if(array -> value == 0)
     {
-      zeroInd[ind] = array -> index;
-      ind++;
+      zeroInd[*ind] = array -> index;
+      *ind = *ind + 1;
     }
 }
 
 SparseNode * rem_zeroes(SparseNode * array)
 {
   int numZeroes = 0;
+  int myInd = 0;
   int i = 0;
 
   numZeroes = count_zeroes(array);
 
   int * myZeroInd = malloc(sizeof(int) * numZeroes);
 
-  get_zero_ind(array, myZeroInd, 0);
+  get_zero_ind(array, myZeroInd, &myInd);
 
   for(i = 0; i < numZeroes; i++)
     {
