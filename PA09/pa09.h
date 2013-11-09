@@ -12,7 +12,12 @@ typedef struct _stack {
     HuffNode * node;
 } Stack;
 
-unsigned char * read_File(FILE * fptr, int * myLength);
-char * convert_Bin(unsigned char * myData);
+char * read_File(FILE * fptr);
+unsigned char CBMask(int myPos);
+HuffNode * create_Node(int value);
+Stack * stack_Push(Stack * head, HuffNode * myNode);
+Stack * stack_Pop(Stack * head);
+Stack * stack_peek(Stack * head);
+Stack * stack_count(Stack * head);
 #endif
 

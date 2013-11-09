@@ -13,7 +13,7 @@ int main ( int argc , char ** argv )
     }
 
   int myLength = 0;
-  unsigned char * myData;
+  char * myData;
 
   //reading input file
   FILE * fptr = NULL;
@@ -25,7 +25,7 @@ int main ( int argc , char ** argv )
       return EXIT_FAILURE;
     }
 
-  myData = read_File(fptr, &myLength);
+  myData = read_File(fptr);
 
   fclose(fptr);
 
@@ -33,17 +33,21 @@ int main ( int argc , char ** argv )
 
   printf("\n");
 
-  while(i < myLength)
+  while(myData[i] != '\n')
     {
-      printf("%d ", myData[i]);
+      printf("%c ", myData[i]);
       i++;
     }
 
-  printf("\n");
-
-  convert_Bin(myData);
+  printf("%c", myData[i]);
 
   printf("\n");
+
+  //convert_Bin(myData, myLength);
+
+  printf("\n");
+
+  free(myData);
 
   return EXIT_SUCCESS;
 }
