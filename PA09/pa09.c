@@ -14,38 +14,38 @@ int main ( int argc , char ** argv )
 
   char * myData;
 
-  //reading input file
+  //opening the input file
   FILE * fptr = NULL;
   fptr = fopen(argv[1], "rb");
 
-  if (fptr == NULL)
+  if (fptr == NULL) //error checking
     {
       printf("File error!\n");
       return EXIT_FAILURE;
     }
 
-  myData = read_File(fptr);
+  myData = read_File(fptr, argv[1]); //read the input file to myData
 
-  fclose(fptr);
+  fclose(fptr); //close the input file
 
   FILE * myOut = NULL;
-  myOut = fopen(argv[2], "w");
+  myOut = fopen(argv[2], "w"); //open and clear or create file to store output
 
-  if (myOut == NULL)
+  if (myOut == NULL) //error checking
     {
       printf("File error!\n");
       return EXIT_FAILURE;
     }
 
-  HuffNode * myTree = create_HuffTree(myData);
+  HuffNode * myTree = create_HuffTree(myData); //create and store HuffTree from myData
 
-  Huff_postOrderPrint(myTree, myOut);
+  Huff_postOrderPrint(myTree, myOut); //print the post-order traversal to file pointed
+                                      //to by myOut
+  HuffTree_destroy(myTree);  //destroy myTree because we're done with it
 
-  HuffTree_destroy(myTree);
+  free(myData);  //frees the char array because we're done with it
 
-  free(myData);
-
-  fclose(myOut);
+  fclose(myOut);  //closes the output file because it's been written
 
   return EXIT_SUCCESS;
 }

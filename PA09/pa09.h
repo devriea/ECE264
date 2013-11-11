@@ -12,7 +12,7 @@ typedef struct _stack {
     HuffNode * node;
 } Stack;
 
-char * read_File(FILE * fptr);
+char * read_File(FILE * fptr, char * myFileName);
 unsigned char CBMask(int myPos);
 HuffNode * create_Node(int value);
 Stack * stack_Push(Stack * head, HuffNode * myNode);
@@ -23,5 +23,6 @@ HuffNode * create_HuffTree(char * myData);
 void Huff_postOrderPrint(HuffNode * tree, FILE * fptr);
 void destroy_helper(HuffNode * array);
 void HuffTree_destroy(HuffNode * array);
+int isFileChar(char * myFileName);
 #endif
 

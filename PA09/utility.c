@@ -1,14 +1,41 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #include "pa09.h"
+#define CH_ZERO 48 //ascii value of '0' is 48
+#define CH_ONE 49  //ascii value of '1' is 49
 
-char * read_File(FILE * fptr)
+/* This function determines if the file we are reading
+ * is a char-based input file or a bit-based input file
+ * and gives an output indicating which is the case.
+ */
+int isFileChar(char * myFileName)
 {
-  int myArrSize = 0;
-  int arrPos = 0;
-  int CBLoc = 0;
-  int myFlag1 = 0;
-  int myFlag2 = 0; //flag for if char still needs to be read in
+  char * isChar = strstr(myFileName, "_ch");
+  if(isChar == NULL)
+    {
+      return 0;
+    }
+  else
+    {
+      return 1;
+    }
+}
+
+/* This function is thing of beauty, it handles both bit-based
+ * input and char based input very well, and can distinguish
+ * how it needs to read the file thanks to the function 
+ * isFileChar. Once it knows whether the file is bit-based
+ * or char-based, it reads the file in accordingly to an array
+ * of chars, then returns the completed array.
+ */
+char * read_File(FILE * fptr, char * myFileName)
+{
+  int myArrSize = 0; //Size of Array
+  int arrPos = 0;    //Location in Array
+  int CBLoc = 0;     //location of CommandBit
+  int myFlag1 = 0;   //error checking flag
+  int myFlag2 = 0;   //flag for if file is bit or byte based
 
   while(fgetc(fptr) != EOF)
     {
@@ -28,20 +55,8 @@ char * read_File(FILE * fptr)
   fseek(fptr, 0, SEEK_SET);
 
   unsigned char myByte = 0x00;
-
-  myByte = fgetc(fptr);
   
-  if(myByte == '1') //see if the file is binary or char based
-    {
-      myFlag2 = 1;
-    }
-
-  myFlag1 = ungetc(myByte, fptr);
-
-  if(myFlag1 == EOF) //error checking
-    {
-      return NULL;
-    }
+  myFlag2 = isFileChar(myFileName); //see if the file is binary or char based
 
   while(!feof(fptr))
     {
@@ -55,17 +70,17 @@ char * read_File(FILE * fptr)
 	  return NULL;
 	}
 
-      if(!myFlag2)  //myFlag2 is asserted if we need to read bits
+      if(!myFlag2) //myFlag2 is asserted if we need to read bits
         {
 
-	  if((CBMask(CBLoc) & myByte) == 0)
+	  if((CBMask(CBLoc) & myByte) == 0) //if we read a zero for the command bit
 	    { 
-	      myData[arrPos] = '0';
+	      myData[arrPos] = '0'; //we store a zero on the char array
 	      arrPos++;
 		  
-	      if(CBLoc != 7)
-		{
-		  myFlag1 = ungetc(myByte, fptr);
+	      if(CBLoc != 7)                  //if there is no leftover data on the current byte
+		{                             //don't put it back
+		  myFlag1 = ungetc(myByte, fptr); 
 
 		  if(myFlag1 == EOF) //error checking
 		    {
@@ -90,13 +105,13 @@ char * read_File(FILE * fptr)
 		    }
 		}
 
-	      unsigned char c1 = myByte << (CBLoc + 1);
-	      unsigned char c2 = myNByte >> (7 - CBLoc);
+	      unsigned char c1 = myByte << (CBLoc + 1);  //gets the first half of the ascii value
+	      unsigned char c2 = myNByte >> (7 - CBLoc); //gets the second half of the ascii value
 
 	      myData[arrPos] = '1';
 	      arrPos++;
-	      myData[arrPos] = (c1 + c2);
-	      arrPos++;
+	      myData[arrPos] = (c1 + c2);  //combines the two halves of the ascii value and stores it
+	      arrPos++;                    //in the char array myData
 	      CBLoc++;
 	    }
 	}
@@ -110,7 +125,8 @@ char * read_File(FILE * fptr)
   return myData;
 }
 
-//function provides the right mask based on command bit location
+
+// This function provides the right mask based on command bit location
 unsigned char CBMask(int myPos)
 {
   unsigned char myMask = 0x80;
@@ -118,6 +134,10 @@ unsigned char CBMask(int myPos)
   return myMask;
 }
 
+
+/* This function creates a new HuffNode and stores the
+ * argument value inside the HuffNode
+ */
 HuffNode * create_Node(int value)
 {
   HuffNode * myNode = NULL;
@@ -129,12 +149,14 @@ HuffNode * create_Node(int value)
     }
   
   myNode -> value = value;
-  myNode -> left = NULL;
-  myNode -> right = NULL;
+  myNode -> left = NULL;   //making a new node means intializing both
+  myNode -> right = NULL;  //left and right values to NULL
   
   return myNode;
 }
 
+
+// This function pushes HuffNodes onto our working stack
 Stack * stack_Push(Stack * head, HuffNode * myNode)
 {
   Stack * myNewHead = NULL;
@@ -148,6 +170,12 @@ Stack * stack_Push(Stack * head, HuffNode * myNode)
   return myNewHead;
 }
 
+
+/* This function pops a value off of our working stack
+ * stores it in the memory location specified by argument
+ * myNode, and returns the new head of our working stack,
+ * which is the one after the node we just popped off.
+ */
 Stack * stack_Pop(Stack * head, HuffNode ** myNode)
 {
   *myNode = head -> node;
@@ -156,6 +184,13 @@ Stack * stack_Pop(Stack * head, HuffNode ** myNode)
   return myNewHead;
 }
 
+
+/* This function allows us to peek at the value on
+ * the top of the stack without modifying the current
+ * stack. It is not currently used in this program
+ * and is left simply for possible need in future
+ * programs
+ */
 HuffNode * stack_Peek(Stack * head)
 {
   return head -> node;
@@ -171,6 +206,13 @@ int stack_Count(Stack * head)
   return stack_Count(head -> next) + 1;
 }
 
+
+/* This function takes an array of chars at memory
+ * location specified by argument myData, puts them
+ * in a HuffNode then puts the HuffNode into our working
+ * stack.  It then creates a HuffTree based on the
+ * instructions it encounters in the array of chars.
+ */
 HuffNode * create_HuffTree(char * myData)
 {
   int myFlag1 = 0;  //asserts if the tree is created
@@ -179,14 +221,14 @@ HuffNode * create_HuffTree(char * myData)
 
   while(!myFlag1)
     {
-      if(myData[i] == 49) //ascii value of 1 is 49
+      if(myData[i] == CH_ONE) //ascii value of 1 is 49
 	{
 	  i++;
 	  HuffNode * myValue = create_Node(myData[i]);
 	  myStack = stack_Push(myStack, myValue);
 	  i++;
 	}
-      else if(myData[i] == 48) //ascii value of 0 is 48
+      else if(myData[i] == CH_ZERO) //ascii value of 0 is 48
 	{
 	  int myCount = stack_Count(myStack);
 	  if(myCount == 1) //if the final tree is on the stack
@@ -215,14 +257,22 @@ HuffNode * create_HuffTree(char * myData)
 	}
       else
 	{
-	  return NULL;
-	}
+	  return NULL; //if we go through the char array correctly we should only ever read
+	}              //CH_ONE or CH_ZERO at this stage, so if we don't, we messed up.
     }
 
-  return NULL;
+  return NULL; //we return NULL if myFlag1 is asserted, meaning there has been an error
 
 }
 
+
+/* This function takes the finalized HuffTree we
+ * created in function create_HuffTree and a pointer
+ * to an empty file to be written to, and traverses
+ * the HuffTree in a post-order fashion, printing 
+ * the direction it takes and the values on the leaves
+ * it encounters along the way.
+ */
 void Huff_postOrderPrint(HuffNode *tree, FILE * fptr)
 {
   // Base case: empty subtree
@@ -248,13 +298,18 @@ void Huff_postOrderPrint(HuffNode *tree, FILE * fptr)
 }
 
 
+/* This function helps destroy the HuffTree when we
+ * are done printing the finalized HuffTree to the 
+ * output file.  It destroys the HuffTree in a post-order
+ * fashion recursively.
+ */
 void destroy_helper(HuffNode * array)
 {
   if(array -> left != NULL) //checks to see if it has any left children
     {
       destroy_helper(array -> left);
     }
-  if(array -> right != NULL) //checks to see fi it has any right children
+  if(array -> right != NULL) //checks to see if it has any right children
     {
       destroy_helper(array -> right);
     }
@@ -264,6 +319,12 @@ void destroy_helper(HuffNode * array)
   return;
 }
 
+/* This function is the main function that destroys the
+ * HuffTree we created by checking to ensure there is
+ * a HuffNode Tree to destroy, then calling its helper
+ * recursive function to actually go throughout the tree
+ * and destroy all the nodes on it.
+ */
 void HuffTree_destroy (HuffNode * array)
 {
   if(array != NULL)
