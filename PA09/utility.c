@@ -126,7 +126,7 @@ unsigned char CBMask(int myPos)
   return myMask;
 }
 
-HuffNode * createa_Node(int value)
+HuffNode * create_Node(int value)
 {
   HuffNode * myNode = NULL;
   myNode = malloc(sizeof(myNode));
@@ -141,4 +141,142 @@ HuffNode * createa_Node(int value)
   myNode -> right = NULL;
   
   return myNode;
+}
+
+Stack * stack_Push(Stack * head, HuffNode * myNode)
+{
+  Stack * myNewHead = NULL;
+  myNewHead = malloc(sizeof(Stack));
+  if(myNewHead == NULL)
+    {
+      return NULL;
+    }
+  myNewHead -> node = myNode;
+  myNewHead -> next = head;
+  return myNewHead;
+}
+
+Stack * stack_Pop(Stack * head, HuffNode ** myNode)
+{
+  *myNode = head -> node;
+  Stack * myNewHead = head -> next;
+  free(head);
+  return myNewHead;
+}
+
+HuffNode * stack_Peek(Stack * head)
+{
+  return head -> node;
+}
+
+int stack_Count(Stack * head)
+{
+  if(head == NULL)
+    {
+      return 0;
+    }
+  
+  return stack_Count(head -> next) + 1;
+}
+
+HuffNode * create_HuffTree(char * myData)
+{
+  int myFlag1 = 0;  //asserts if the tree is created
+  int i = 0;
+  Stack * myStack = NULL;
+
+  while(!myFlag1)
+    {
+      if(myData[i] == 49) //ascii value of 1 is 49
+	{
+	  i++;
+	  HuffNode * myValue = create_Node(myData[i]);
+	  myStack = stack_Push(myStack, myValue);
+	  i++;
+	}
+      else if(myData[i] == 48) //ascii value of 0 is 48
+	{
+	  int myCount = stack_Count(myStack);
+	  if(myCount == 1)
+	    {
+	      HuffNode * myTree = myStack -> node;
+	      free(myStack);
+	      myFlag1 = 1;
+	      return myTree;
+	    }
+	  else if(myCount > 1)
+	    {
+	      HuffNode * myNode1 = NULL;
+	      HuffNode * myNode2 = NULL;
+	      myStack = stack_Pop(myStack, &myNode1);
+	      myStack = stack_Pop(myStack, &myNode2);
+	      HuffNode * myParent = create_Node(0);
+	      myParent -> right = myNode1;
+	      myParent -> left = myNode2;
+	      myStack = stack_Push(myStack, myParent);
+	    }
+	  else
+	    {
+	      return NULL;
+	    }
+	  i++;
+	}
+      else
+	{
+	  return NULL;
+	}
+    }
+
+  return NULL;
+
+}
+
+void Huff_postOrderPrint(HuffNode *tree)
+{
+    // Base case: empty subtree
+    if (tree == NULL) {
+		return;
+    }
+
+    // Recursive case: post-order traversal
+
+    // Visit left
+    printf("Left\n");
+    Huff_postOrderPrint(tree->left);
+	printf("Back\n");
+    // Visit right
+    printf("Right\n");
+    Huff_postOrderPrint(tree->right);
+	printf("Back\n");
+    // Visit node itself (only if leaf)
+    if (tree->left == NULL && tree->right == NULL) {
+		printf("Leaf: %c\n", tree->value);
+    }
+    
+
+}
+
+
+void destroy_helper(HuffNode * array)
+{
+  if(array -> left != NULL)
+    {
+      destroy_helper(array -> left);
+    }
+  if(array -> right != NULL)
+    {
+      destroy_helper(array -> right);
+    }
+
+  free(array);
+
+  return;
+}
+
+void HuffTree_destroy (HuffNode * array)
+{
+  if(array != NULL)
+    {
+      destroy_helper(array);
+    }
 }

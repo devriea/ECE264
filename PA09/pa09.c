@@ -12,7 +12,6 @@ int main ( int argc , char ** argv )
       return EXIT_FAILURE;
     }
 
-  int myLength = 0;
   char * myData;
 
   //reading input file
@@ -43,9 +42,13 @@ int main ( int argc , char ** argv )
 
   printf("\n");
 
-  //convert_Bin(myData, myLength);
+  HuffNode * myTree = create_HuffTree(myData);
 
   printf("\n");
+
+  Huff_postOrderPrint(myTree);
+
+  HuffTree_destroy(myTree);
 
   free(myData);
 

@@ -16,8 +16,12 @@ char * read_File(FILE * fptr);
 unsigned char CBMask(int myPos);
 HuffNode * create_Node(int value);
 Stack * stack_Push(Stack * head, HuffNode * myNode);
-Stack * stack_Pop(Stack * head);
-Stack * stack_peek(Stack * head);
-Stack * stack_count(Stack * head);
+Stack * stack_Pop(Stack * head, HuffNode ** myNode);
+HuffNode * stack_Peek(Stack * head);
+int stack_Count(Stack * head);
+HuffNode * create_HuffTree(char * myData);
+void Huff_postOrderPrint(HuffNode * tree);
+void destroy_helper(HuffNode * array);
+void HuffTree_destroy(HuffNode * array);
 #endif
 
