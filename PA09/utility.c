@@ -223,7 +223,7 @@ HuffNode * create_HuffTree(char * myData)
 
 }
 
-void Huff_postOrderPrint(HuffNode *tree)
+void Huff_postOrderPrint(HuffNode *tree, FILE * fptr)
 {
   // Base case: empty subtree
   if (tree == NULL) {
@@ -233,19 +233,18 @@ void Huff_postOrderPrint(HuffNode *tree)
   // Recursive case: post-order traversal
 
   // Visit left
-  printf("Left\n");
-  Huff_postOrderPrint(tree->left);
-  printf("Back\n");
+  fprintf(fptr, "%s", "Left\n");
+  Huff_postOrderPrint(tree->left, fptr);
+  fprintf(fptr, "%s", "Back\n");
   // Visit right
-  printf("Right\n");
-  Huff_postOrderPrint(tree->right);
-  printf("Back\n");
+  fprintf(fptr, "%s", "Right\n");
+  Huff_postOrderPrint(tree->right, fptr);
+  fprintf(fptr, "%s", "Back\n");
   // Visit node itself (only if leaf)
   if (tree->left == NULL && tree->right == NULL) {
-    printf("Leaf: %c\n", tree->value);
+    fprintf(fptr, "%s%c%c", "Leaf: ", tree->value, '\n');
   }
     
-
 }
 
 

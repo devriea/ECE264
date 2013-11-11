@@ -20,7 +20,7 @@ Stack * stack_Pop(Stack * head, HuffNode ** myNode);
 HuffNode * stack_Peek(Stack * head);
 int stack_Count(Stack * head);
 HuffNode * create_HuffTree(char * myData);
-void Huff_postOrderPrint(HuffNode * tree);
+void Huff_postOrderPrint(HuffNode * tree, FILE * fptr);
 void destroy_helper(HuffNode * array);
 void HuffTree_destroy(HuffNode * array);
 #endif

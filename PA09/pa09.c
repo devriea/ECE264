@@ -28,29 +28,24 @@ int main ( int argc , char ** argv )
 
   fclose(fptr);
 
-  int i = 0;
+  FILE * myOut = NULL;
+  myOut = fopen(argv[2], "w");
 
-  printf("\n");
-
-  while(myData[i] != EOF)
+  if (myOut == NULL)
     {
-      printf("%c ", myData[i]);
-      i++;
+      printf("File error!\n");
+      return EXIT_FAILURE;
     }
-
-  printf("%c", myData[i]);
-
-  printf("\n");
 
   HuffNode * myTree = create_HuffTree(myData);
 
-  printf("\n");
-
-  //Huff_postOrderPrint(myTree);
+  Huff_postOrderPrint(myTree, myOut);
 
   HuffTree_destroy(myTree);
 
   free(myData);
+
+  fclose(myOut);
 
   return EXIT_SUCCESS;
 }
