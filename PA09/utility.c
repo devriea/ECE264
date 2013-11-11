@@ -9,14 +9,16 @@ char * read_File(FILE * fptr)
   int CBLoc = 0;
   int myFlag1 = 0;
   int myFlag2 = 0; //flag for if char still needs to be read in
-  int myZeroCt = 0;
 
-  while(fgetc(fptr) != 0x0A)
+  while(fgetc(fptr) != EOF)
     {
       myArrSize++;
     }
   
-  char * myData = malloc(((myArrSize * 2) + 8) * sizeof(char));
+  /* memory allocation is for worst case scenario of bit based input
+   * with nothing but 0's to store.*/
+
+  char * myData = malloc((myArrSize * 8) * sizeof(char));
   
   if(myData == NULL)
     {
@@ -36,63 +38,53 @@ char * read_File(FILE * fptr)
 
   myFlag1 = ungetc(myByte, fptr);
 
-  if(myFlag1 == EOF)
+  if(myFlag1 == EOF) //error checking
     {
       return NULL;
     }
 
-  while(myByte != 0x0A)
+  while(!feof(fptr))
     {
       myByte = fgetc(fptr);  //opens 1 byte of information from the input file
       fpos_t myPrevFPos;
       myFlag1 = fgetpos(fptr, &myPrevFPos); //flag to make sure getPos doesn't error
       CBLoc = (CBLoc % 8);  //keep Command Bit Location inside the byte
 
-      if(myFlag1 != 0)
+      if(myFlag1 != 0)  //fgetpos returns 0 if successful
 	{
 	  return NULL;
 	}
 
-      if(!myFlag2)
+      if(!myFlag2)  //myFlag2 is asserted if we need to read bits
         {
 
 	  if((CBMask(CBLoc) & myByte) == 0)
 	    { 
-	      if(myZeroCt == 0) //if the previous char read in was a 0
+	      myData[arrPos] = '0';
+	      arrPos++;
+		  
+	      if(CBLoc != 7)
 		{
-		  myData[arrPos] = '0';
-		  arrPos++;
-		  CBLoc++;
-		  myZeroCt++;
-     
 		  myFlag1 = ungetc(myByte, fptr);
 
-		  if(myFlag1 == EOF)
+		  if(myFlag1 == EOF) //error checking
 		    {
 		      return NULL;
 		    }
 		}
-	      else
-		{
-		  while(CBLoc < 8)
-		    {
-		      myData[arrPos] = '0';
-		      arrPos++;
-		      CBLoc++;
-		    }
-		  myFlag2 = 1;
-		}
+
+	      CBLoc++;
 
 	    }
 	  else
 	    {
-	      unsigned char myNByte = fgetc(fptr);
+	      unsigned char myNByte = fgetc(fptr); //gets the next byte to assemble ascii value
 
 	      if(CBLoc != 7)
 		{
 		  myFlag1 = fsetpos(fptr, &myPrevFPos);
 
-		  if(myFlag1 != 0)
+		  if(myFlag1 != 0) // error checking
 		    {
 		      return NULL;
 		    }
@@ -105,7 +97,6 @@ char * read_File(FILE * fptr)
 	      arrPos++;
 	      myData[arrPos] = (c1 + c2);
 	      arrPos++;
-	      myZeroCt = 0;
 	      CBLoc++;
 	    }
 	}
@@ -119,6 +110,7 @@ char * read_File(FILE * fptr)
   return myData;
 }
 
+//function provides the right mask based on command bit location
 unsigned char CBMask(int myPos)
 {
   unsigned char myMask = 0x80;
@@ -129,9 +121,9 @@ unsigned char CBMask(int myPos)
 HuffNode * create_Node(int value)
 {
   HuffNode * myNode = NULL;
-  myNode = malloc(sizeof(myNode));
+  myNode = malloc(sizeof(HuffNode));
   
-  if(myNode == NULL)
+  if(myNode == NULL) //error checking
     {
       return NULL;
     }
@@ -147,7 +139,7 @@ Stack * stack_Push(Stack * head, HuffNode * myNode)
 {
   Stack * myNewHead = NULL;
   myNewHead = malloc(sizeof(Stack));
-  if(myNewHead == NULL)
+  if(myNewHead == NULL) //error checking
     {
       return NULL;
     }
@@ -159,7 +151,7 @@ Stack * stack_Push(Stack * head, HuffNode * myNode)
 Stack * stack_Pop(Stack * head, HuffNode ** myNode)
 {
   *myNode = head -> node;
-  Stack * myNewHead = head -> next;
+  Stack * myNewHead = head -> next; //gets next value on stack to return
   free(head);
   return myNewHead;
 }
@@ -197,14 +189,14 @@ HuffNode * create_HuffTree(char * myData)
       else if(myData[i] == 48) //ascii value of 0 is 48
 	{
 	  int myCount = stack_Count(myStack);
-	  if(myCount == 1)
+	  if(myCount == 1) //if the final tree is on the stack
 	    {
 	      HuffNode * myTree = myStack -> node;
 	      free(myStack);
 	      myFlag1 = 1;
 	      return myTree;
 	    }
-	  else if(myCount > 1)
+	  else if(myCount > 1) //otherwise create parent node for top two stack entries
 	    {
 	      HuffNode * myNode1 = NULL;
 	      HuffNode * myNode2 = NULL;
@@ -217,7 +209,7 @@ HuffNode * create_HuffTree(char * myData)
 	    }
 	  else
 	    {
-	      return NULL;
+	      return NULL; //if we have 0 entries on the stack when faced with a zero we dun goofed
 	    }
 	  i++;
 	}
@@ -233,25 +225,25 @@ HuffNode * create_HuffTree(char * myData)
 
 void Huff_postOrderPrint(HuffNode *tree)
 {
-    // Base case: empty subtree
-    if (tree == NULL) {
-		return;
-    }
+  // Base case: empty subtree
+  if (tree == NULL) {
+    return;
+  }
 
-    // Recursive case: post-order traversal
+  // Recursive case: post-order traversal
 
-    // Visit left
-    printf("Left\n");
-    Huff_postOrderPrint(tree->left);
-	printf("Back\n");
-    // Visit right
-    printf("Right\n");
-    Huff_postOrderPrint(tree->right);
-	printf("Back\n");
-    // Visit node itself (only if leaf)
-    if (tree->left == NULL && tree->right == NULL) {
-		printf("Leaf: %c\n", tree->value);
-    }
+  // Visit left
+  printf("Left\n");
+  Huff_postOrderPrint(tree->left);
+  printf("Back\n");
+  // Visit right
+  printf("Right\n");
+  Huff_postOrderPrint(tree->right);
+  printf("Back\n");
+  // Visit node itself (only if leaf)
+  if (tree->left == NULL && tree->right == NULL) {
+    printf("Leaf: %c\n", tree->value);
+  }
     
 
 }
@@ -259,16 +251,16 @@ void Huff_postOrderPrint(HuffNode *tree)
 
 void destroy_helper(HuffNode * array)
 {
-  if(array -> left != NULL)
+  if(array -> left != NULL) //checks to see if it has any left children
     {
       destroy_helper(array -> left);
     }
-  if(array -> right != NULL)
+  if(array -> right != NULL) //checks to see fi it has any right children
     {
       destroy_helper(array -> right);
     }
 
-  free(array);
+  free(array); //destroys itself
 
   return;
 }

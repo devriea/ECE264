@@ -32,7 +32,7 @@ int main ( int argc , char ** argv )
 
   printf("\n");
 
-  while(myData[i] != '\n')
+  while(myData[i] != EOF)
     {
       printf("%c ", myData[i]);
       i++;
@@ -46,7 +46,7 @@ int main ( int argc , char ** argv )
 
   printf("\n");
 
-  Huff_postOrderPrint(myTree);
+  //Huff_postOrderPrint(myTree);
 
   HuffTree_destroy(myTree);
 
