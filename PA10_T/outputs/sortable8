@@ -1,0 +1,4290 @@
+input: 12345678
+output: 1
+
+input: 12345687
+output: 1
+
+input: 12345768
+output: 1
+
+input: 12345876
+output: 1
+
+input: 12345867
+output: 1
+
+input: 12346578
+output: 1
+
+input: 12346587
+output: 1
+
+input: 12347658
+output: 1
+
+input: 12347568
+output: 1
+
+input: 12348657
+output: 1
+
+input: 12348765
+output: 1
+
+input: 12348756
+output: 1
+
+input: 12348576
+output: 1
+
+input: 12348567
+output: 1
+
+input: 12354678
+output: 1
+
+input: 12354687
+output: 1
+
+input: 12354768
+output: 1
+
+input: 12354876
+output: 1
+
+input: 12354867
+output: 1
+
+input: 12365478
+output: 1
+
+input: 12365487
+output: 1
+
+input: 12364578
+output: 1
+
+input: 12364587
+output: 1
+
+input: 12375468
+output: 1
+
+input: 12376548
+output: 1
+
+input: 12376458
+output: 1
+
+input: 12374658
+output: 1
+
+input: 12374568
+output: 1
+
+input: 12385476
+output: 1
+
+input: 12385467
+output: 1
+
+input: 12386547
+output: 1
+
+input: 12386457
+output: 1
+
+input: 12387654
+output: 1
+
+input: 12387645
+output: 1
+
+input: 12387546
+output: 1
+
+input: 12387456
+output: 1
+
+input: 12387465
+output: 1
+
+input: 12384657
+output: 1
+
+input: 12384765
+output: 1
+
+input: 12384756
+output: 1
+
+input: 12384576
+output: 1
+
+input: 12384567
+output: 1
+
+input: 12435678
+output: 1
+
+input: 12435687
+output: 1
+
+input: 12435768
+output: 1
+
+input: 12435876
+output: 1
+
+input: 12435867
+output: 1
+
+input: 12436578
+output: 1
+
+input: 12436587
+output: 1
+
+input: 12437658
+output: 1
+
+input: 12437568
+output: 1
+
+input: 12438657
+output: 1
+
+input: 12438765
+output: 1
+
+input: 12438756
+output: 1
+
+input: 12438576
+output: 1
+
+input: 12438567
+output: 1
+
+input: 12543678
+output: 1
+
+input: 12543687
+output: 1
+
+input: 12543768
+output: 1
+
+input: 12543876
+output: 1
+
+input: 12543867
+output: 1
+
+input: 12534678
+output: 1
+
+input: 12534687
+output: 1
+
+input: 12534768
+output: 1
+
+input: 12534876
+output: 1
+
+input: 12534867
+output: 1
+
+input: 12643578
+output: 1
+
+input: 12643587
+output: 1
+
+input: 12654378
+output: 1
+
+input: 12654387
+output: 1
+
+input: 12653478
+output: 1
+
+input: 12653487
+output: 1
+
+input: 12635478
+output: 1
+
+input: 12635487
+output: 1
+
+input: 12634578
+output: 1
+
+input: 12634587
+output: 1
+
+input: 12743658
+output: 1
+
+input: 12743568
+output: 1
+
+input: 12754368
+output: 1
+
+input: 12753468
+output: 1
+
+input: 12765438
+output: 1
+
+input: 12765348
+output: 1
+
+input: 12764358
+output: 1
+
+input: 12763458
+output: 1
+
+input: 12763548
+output: 1
+
+input: 12735468
+output: 1
+
+input: 12736548
+output: 1
+
+input: 12736458
+output: 1
+
+input: 12734658
+output: 1
+
+input: 12734568
+output: 1
+
+input: 12843657
+output: 1
+
+input: 12843765
+output: 1
+
+input: 12843756
+output: 1
+
+input: 12843576
+output: 1
+
+input: 12843567
+output: 1
+
+input: 12854376
+output: 1
+
+input: 12854367
+output: 1
+
+input: 12853476
+output: 1
+
+input: 12853467
+output: 1
+
+input: 12865437
+output: 1
+
+input: 12865347
+output: 1
+
+input: 12864357
+output: 1
+
+input: 12863457
+output: 1
+
+input: 12863547
+output: 1
+
+input: 12875436
+output: 1
+
+input: 12875346
+output: 1
+
+input: 12876543
+output: 1
+
+input: 12876534
+output: 1
+
+input: 12876435
+output: 1
+
+input: 12876345
+output: 1
+
+input: 12876354
+output: 1
+
+input: 12874356
+output: 1
+
+input: 12874365
+output: 1
+
+input: 12873645
+output: 1
+
+input: 12873654
+output: 1
+
+input: 12873465
+output: 1
+
+input: 12873456
+output: 1
+
+input: 12873546
+output: 1
+
+input: 12835476
+output: 1
+
+input: 12835467
+output: 1
+
+input: 12836547
+output: 1
+
+input: 12836457
+output: 1
+
+input: 12837654
+output: 1
+
+input: 12837645
+output: 1
+
+input: 12837546
+output: 1
+
+input: 12837456
+output: 1
+
+input: 12837465
+output: 1
+
+input: 12834657
+output: 1
+
+input: 12834765
+output: 1
+
+input: 12834756
+output: 1
+
+input: 12834576
+output: 1
+
+input: 12834567
+output: 1
+
+input: 13245678
+output: 1
+
+input: 13245687
+output: 1
+
+input: 13245768
+output: 1
+
+input: 13245876
+output: 1
+
+input: 13245867
+output: 1
+
+input: 13246578
+output: 1
+
+input: 13246587
+output: 1
+
+input: 13247658
+output: 1
+
+input: 13247568
+output: 1
+
+input: 13248657
+output: 1
+
+input: 13248765
+output: 1
+
+input: 13248756
+output: 1
+
+input: 13248576
+output: 1
+
+input: 13248567
+output: 1
+
+input: 13254678
+output: 1
+
+input: 13254687
+output: 1
+
+input: 13254768
+output: 1
+
+input: 13254876
+output: 1
+
+input: 13254867
+output: 1
+
+input: 13265478
+output: 1
+
+input: 13265487
+output: 1
+
+input: 13264578
+output: 1
+
+input: 13264587
+output: 1
+
+input: 13275468
+output: 1
+
+input: 13276548
+output: 1
+
+input: 13276458
+output: 1
+
+input: 13274658
+output: 1
+
+input: 13274568
+output: 1
+
+input: 13285476
+output: 1
+
+input: 13285467
+output: 1
+
+input: 13286547
+output: 1
+
+input: 13286457
+output: 1
+
+input: 13287654
+output: 1
+
+input: 13287645
+output: 1
+
+input: 13287546
+output: 1
+
+input: 13287456
+output: 1
+
+input: 13287465
+output: 1
+
+input: 13284657
+output: 1
+
+input: 13284765
+output: 1
+
+input: 13284756
+output: 1
+
+input: 13284576
+output: 1
+
+input: 13284567
+output: 1
+
+input: 14325678
+output: 1
+
+input: 14325687
+output: 1
+
+input: 14325768
+output: 1
+
+input: 14325876
+output: 1
+
+input: 14325867
+output: 1
+
+input: 14326578
+output: 1
+
+input: 14326587
+output: 1
+
+input: 14327658
+output: 1
+
+input: 14327568
+output: 1
+
+input: 14328657
+output: 1
+
+input: 14328765
+output: 1
+
+input: 14328756
+output: 1
+
+input: 14328576
+output: 1
+
+input: 14328567
+output: 1
+
+input: 14235678
+output: 1
+
+input: 14235687
+output: 1
+
+input: 14235768
+output: 1
+
+input: 14235876
+output: 1
+
+input: 14235867
+output: 1
+
+input: 14236578
+output: 1
+
+input: 14236587
+output: 1
+
+input: 14237658
+output: 1
+
+input: 14237568
+output: 1
+
+input: 14238657
+output: 1
+
+input: 14238765
+output: 1
+
+input: 14238756
+output: 1
+
+input: 14238576
+output: 1
+
+input: 14238567
+output: 1
+
+input: 15324678
+output: 1
+
+input: 15324687
+output: 1
+
+input: 15324768
+output: 1
+
+input: 15324876
+output: 1
+
+input: 15324867
+output: 1
+
+input: 15432678
+output: 1
+
+input: 15432687
+output: 1
+
+input: 15432768
+output: 1
+
+input: 15432876
+output: 1
+
+input: 15432867
+output: 1
+
+input: 15423678
+output: 1
+
+input: 15423687
+output: 1
+
+input: 15423768
+output: 1
+
+input: 15423876
+output: 1
+
+input: 15423867
+output: 1
+
+input: 15243678
+output: 1
+
+input: 15243687
+output: 1
+
+input: 15243768
+output: 1
+
+input: 15243876
+output: 1
+
+input: 15243867
+output: 1
+
+input: 15234678
+output: 1
+
+input: 15234687
+output: 1
+
+input: 15234768
+output: 1
+
+input: 15234876
+output: 1
+
+input: 15234867
+output: 1
+
+input: 16325478
+output: 1
+
+input: 16325487
+output: 1
+
+input: 16324578
+output: 1
+
+input: 16324587
+output: 1
+
+input: 16432578
+output: 1
+
+input: 16432587
+output: 1
+
+input: 16423578
+output: 1
+
+input: 16423587
+output: 1
+
+input: 16543278
+output: 1
+
+input: 16543287
+output: 1
+
+input: 16542378
+output: 1
+
+input: 16542387
+output: 1
+
+input: 16532478
+output: 1
+
+input: 16532487
+output: 1
+
+input: 16523478
+output: 1
+
+input: 16523487
+output: 1
+
+input: 16524378
+output: 1
+
+input: 16524387
+output: 1
+
+input: 16243578
+output: 1
+
+input: 16243587
+output: 1
+
+input: 16254378
+output: 1
+
+input: 16254387
+output: 1
+
+input: 16253478
+output: 1
+
+input: 16253487
+output: 1
+
+input: 16235478
+output: 1
+
+input: 16235487
+output: 1
+
+input: 16234578
+output: 1
+
+input: 16234587
+output: 1
+
+input: 17325468
+output: 1
+
+input: 17326548
+output: 1
+
+input: 17326458
+output: 1
+
+input: 17324658
+output: 1
+
+input: 17324568
+output: 1
+
+input: 17432658
+output: 1
+
+input: 17432568
+output: 1
+
+input: 17423658
+output: 1
+
+input: 17423568
+output: 1
+
+input: 17543268
+output: 1
+
+input: 17542368
+output: 1
+
+input: 17532468
+output: 1
+
+input: 17523468
+output: 1
+
+input: 17524368
+output: 1
+
+input: 17643258
+output: 1
+
+input: 17642358
+output: 1
+
+input: 17654328
+output: 1
+
+input: 17654238
+output: 1
+
+input: 17653248
+output: 1
+
+input: 17652348
+output: 1
+
+input: 17652438
+output: 1
+
+input: 17632458
+output: 1
+
+input: 17632548
+output: 1
+
+input: 17625348
+output: 1
+
+input: 17625438
+output: 1
+
+input: 17623548
+output: 1
+
+input: 17623458
+output: 1
+
+input: 17624358
+output: 1
+
+input: 17243658
+output: 1
+
+input: 17243568
+output: 1
+
+input: 17254368
+output: 1
+
+input: 17253468
+output: 1
+
+input: 17265438
+output: 1
+
+input: 17265348
+output: 1
+
+input: 17264358
+output: 1
+
+input: 17263458
+output: 1
+
+input: 17263548
+output: 1
+
+input: 17235468
+output: 1
+
+input: 17236548
+output: 1
+
+input: 17236458
+output: 1
+
+input: 17234658
+output: 1
+
+input: 17234568
+output: 1
+
+input: 18325476
+output: 1
+
+input: 18325467
+output: 1
+
+input: 18326547
+output: 1
+
+input: 18326457
+output: 1
+
+input: 18327654
+output: 1
+
+input: 18327645
+output: 1
+
+input: 18327546
+output: 1
+
+input: 18327456
+output: 1
+
+input: 18327465
+output: 1
+
+input: 18324657
+output: 1
+
+input: 18324765
+output: 1
+
+input: 18324756
+output: 1
+
+input: 18324576
+output: 1
+
+input: 18324567
+output: 1
+
+input: 18432657
+output: 1
+
+input: 18432765
+output: 1
+
+input: 18432756
+output: 1
+
+input: 18432576
+output: 1
+
+input: 18432567
+output: 1
+
+input: 18423657
+output: 1
+
+input: 18423765
+output: 1
+
+input: 18423756
+output: 1
+
+input: 18423576
+output: 1
+
+input: 18423567
+output: 1
+
+input: 18543276
+output: 1
+
+input: 18543267
+output: 1
+
+input: 18542376
+output: 1
+
+input: 18542367
+output: 1
+
+input: 18532476
+output: 1
+
+input: 18532467
+output: 1
+
+input: 18523476
+output: 1
+
+input: 18523467
+output: 1
+
+input: 18524376
+output: 1
+
+input: 18524367
+output: 1
+
+input: 18643257
+output: 1
+
+input: 18642357
+output: 1
+
+input: 18654327
+output: 1
+
+input: 18654237
+output: 1
+
+input: 18653247
+output: 1
+
+input: 18652347
+output: 1
+
+input: 18652437
+output: 1
+
+input: 18632457
+output: 1
+
+input: 18632547
+output: 1
+
+input: 18625347
+output: 1
+
+input: 18625437
+output: 1
+
+input: 18623547
+output: 1
+
+input: 18623457
+output: 1
+
+input: 18624357
+output: 1
+
+input: 18743256
+output: 1
+
+input: 18743265
+output: 1
+
+input: 18742365
+output: 1
+
+input: 18742356
+output: 1
+
+input: 18754326
+output: 1
+
+input: 18754236
+output: 1
+
+input: 18753246
+output: 1
+
+input: 18752346
+output: 1
+
+input: 18752436
+output: 1
+
+input: 18765432
+output: 1
+
+input: 18765423
+output: 1
+
+input: 18765324
+output: 1
+
+input: 18765234
+output: 1
+
+input: 18765243
+output: 1
+
+input: 18764325
+output: 1
+
+input: 18764235
+output: 1
+
+input: 18763254
+output: 1
+
+input: 18763245
+output: 1
+
+input: 18762435
+output: 1
+
+input: 18762345
+output: 1
+
+input: 18762354
+output: 1
+
+input: 18762534
+output: 1
+
+input: 18762543
+output: 1
+
+input: 18732645
+output: 1
+
+input: 18732654
+output: 1
+
+input: 18732465
+output: 1
+
+input: 18732456
+output: 1
+
+input: 18732546
+output: 1
+
+input: 18725346
+output: 1
+
+input: 18725436
+output: 1
+
+input: 18726534
+output: 1
+
+input: 18726543
+output: 1
+
+input: 18726354
+output: 1
+
+input: 18726345
+output: 1
+
+input: 18726435
+output: 1
+
+input: 18723654
+output: 1
+
+input: 18723645
+output: 1
+
+input: 18723546
+output: 1
+
+input: 18723456
+output: 1
+
+input: 18723465
+output: 1
+
+input: 18724365
+output: 1
+
+input: 18724356
+output: 1
+
+input: 18243657
+output: 1
+
+input: 18243765
+output: 1
+
+input: 18243756
+output: 1
+
+input: 18243576
+output: 1
+
+input: 18243567
+output: 1
+
+input: 18254376
+output: 1
+
+input: 18254367
+output: 1
+
+input: 18253476
+output: 1
+
+input: 18253467
+output: 1
+
+input: 18265437
+output: 1
+
+input: 18265347
+output: 1
+
+input: 18264357
+output: 1
+
+input: 18263457
+output: 1
+
+input: 18263547
+output: 1
+
+input: 18275436
+output: 1
+
+input: 18275346
+output: 1
+
+input: 18276543
+output: 1
+
+input: 18276534
+output: 1
+
+input: 18276435
+output: 1
+
+input: 18276345
+output: 1
+
+input: 18276354
+output: 1
+
+input: 18274356
+output: 1
+
+input: 18274365
+output: 1
+
+input: 18273645
+output: 1
+
+input: 18273654
+output: 1
+
+input: 18273465
+output: 1
+
+input: 18273456
+output: 1
+
+input: 18273546
+output: 1
+
+input: 18235476
+output: 1
+
+input: 18235467
+output: 1
+
+input: 18236547
+output: 1
+
+input: 18236457
+output: 1
+
+input: 18237654
+output: 1
+
+input: 18237645
+output: 1
+
+input: 18237546
+output: 1
+
+input: 18237456
+output: 1
+
+input: 18237465
+output: 1
+
+input: 18234657
+output: 1
+
+input: 18234765
+output: 1
+
+input: 18234756
+output: 1
+
+input: 18234576
+output: 1
+
+input: 18234567
+output: 1
+
+input: 21345678
+output: 1
+
+input: 21345687
+output: 1
+
+input: 21345768
+output: 1
+
+input: 21345876
+output: 1
+
+input: 21345867
+output: 1
+
+input: 21346578
+output: 1
+
+input: 21346587
+output: 1
+
+input: 21347658
+output: 1
+
+input: 21347568
+output: 1
+
+input: 21348657
+output: 1
+
+input: 21348765
+output: 1
+
+input: 21348756
+output: 1
+
+input: 21348576
+output: 1
+
+input: 21348567
+output: 1
+
+input: 21354678
+output: 1
+
+input: 21354687
+output: 1
+
+input: 21354768
+output: 1
+
+input: 21354876
+output: 1
+
+input: 21354867
+output: 1
+
+input: 21365478
+output: 1
+
+input: 21365487
+output: 1
+
+input: 21364578
+output: 1
+
+input: 21364587
+output: 1
+
+input: 21375468
+output: 1
+
+input: 21376548
+output: 1
+
+input: 21376458
+output: 1
+
+input: 21374658
+output: 1
+
+input: 21374568
+output: 1
+
+input: 21385476
+output: 1
+
+input: 21385467
+output: 1
+
+input: 21386547
+output: 1
+
+input: 21386457
+output: 1
+
+input: 21387654
+output: 1
+
+input: 21387645
+output: 1
+
+input: 21387546
+output: 1
+
+input: 21387456
+output: 1
+
+input: 21387465
+output: 1
+
+input: 21384657
+output: 1
+
+input: 21384765
+output: 1
+
+input: 21384756
+output: 1
+
+input: 21384576
+output: 1
+
+input: 21384567
+output: 1
+
+input: 21435678
+output: 1
+
+input: 21435687
+output: 1
+
+input: 21435768
+output: 1
+
+input: 21435876
+output: 1
+
+input: 21435867
+output: 1
+
+input: 21436578
+output: 1
+
+input: 21436587
+output: 1
+
+input: 21437658
+output: 1
+
+input: 21437568
+output: 1
+
+input: 21438657
+output: 1
+
+input: 21438765
+output: 1
+
+input: 21438756
+output: 1
+
+input: 21438576
+output: 1
+
+input: 21438567
+output: 1
+
+input: 21543678
+output: 1
+
+input: 21543687
+output: 1
+
+input: 21543768
+output: 1
+
+input: 21543876
+output: 1
+
+input: 21543867
+output: 1
+
+input: 21534678
+output: 1
+
+input: 21534687
+output: 1
+
+input: 21534768
+output: 1
+
+input: 21534876
+output: 1
+
+input: 21534867
+output: 1
+
+input: 21643578
+output: 1
+
+input: 21643587
+output: 1
+
+input: 21654378
+output: 1
+
+input: 21654387
+output: 1
+
+input: 21653478
+output: 1
+
+input: 21653487
+output: 1
+
+input: 21635478
+output: 1
+
+input: 21635487
+output: 1
+
+input: 21634578
+output: 1
+
+input: 21634587
+output: 1
+
+input: 21743658
+output: 1
+
+input: 21743568
+output: 1
+
+input: 21754368
+output: 1
+
+input: 21753468
+output: 1
+
+input: 21765438
+output: 1
+
+input: 21765348
+output: 1
+
+input: 21764358
+output: 1
+
+input: 21763458
+output: 1
+
+input: 21763548
+output: 1
+
+input: 21735468
+output: 1
+
+input: 21736548
+output: 1
+
+input: 21736458
+output: 1
+
+input: 21734658
+output: 1
+
+input: 21734568
+output: 1
+
+input: 21843657
+output: 1
+
+input: 21843765
+output: 1
+
+input: 21843756
+output: 1
+
+input: 21843576
+output: 1
+
+input: 21843567
+output: 1
+
+input: 21854376
+output: 1
+
+input: 21854367
+output: 1
+
+input: 21853476
+output: 1
+
+input: 21853467
+output: 1
+
+input: 21865437
+output: 1
+
+input: 21865347
+output: 1
+
+input: 21864357
+output: 1
+
+input: 21863457
+output: 1
+
+input: 21863547
+output: 1
+
+input: 21875436
+output: 1
+
+input: 21875346
+output: 1
+
+input: 21876543
+output: 1
+
+input: 21876534
+output: 1
+
+input: 21876435
+output: 1
+
+input: 21876345
+output: 1
+
+input: 21876354
+output: 1
+
+input: 21874356
+output: 1
+
+input: 21874365
+output: 1
+
+input: 21873645
+output: 1
+
+input: 21873654
+output: 1
+
+input: 21873465
+output: 1
+
+input: 21873456
+output: 1
+
+input: 21873546
+output: 1
+
+input: 21835476
+output: 1
+
+input: 21835467
+output: 1
+
+input: 21836547
+output: 1
+
+input: 21836457
+output: 1
+
+input: 21837654
+output: 1
+
+input: 21837645
+output: 1
+
+input: 21837546
+output: 1
+
+input: 21837456
+output: 1
+
+input: 21837465
+output: 1
+
+input: 21834657
+output: 1
+
+input: 21834765
+output: 1
+
+input: 21834756
+output: 1
+
+input: 21834576
+output: 1
+
+input: 21834567
+output: 1
+
+input: 32145678
+output: 1
+
+input: 32145687
+output: 1
+
+input: 32145768
+output: 1
+
+input: 32145876
+output: 1
+
+input: 32145867
+output: 1
+
+input: 32146578
+output: 1
+
+input: 32146587
+output: 1
+
+input: 32147658
+output: 1
+
+input: 32147568
+output: 1
+
+input: 32148657
+output: 1
+
+input: 32148765
+output: 1
+
+input: 32148756
+output: 1
+
+input: 32148576
+output: 1
+
+input: 32148567
+output: 1
+
+input: 32154678
+output: 1
+
+input: 32154687
+output: 1
+
+input: 32154768
+output: 1
+
+input: 32154876
+output: 1
+
+input: 32154867
+output: 1
+
+input: 32165478
+output: 1
+
+input: 32165487
+output: 1
+
+input: 32164578
+output: 1
+
+input: 32164587
+output: 1
+
+input: 32175468
+output: 1
+
+input: 32176548
+output: 1
+
+input: 32176458
+output: 1
+
+input: 32174658
+output: 1
+
+input: 32174568
+output: 1
+
+input: 32185476
+output: 1
+
+input: 32185467
+output: 1
+
+input: 32186547
+output: 1
+
+input: 32186457
+output: 1
+
+input: 32187654
+output: 1
+
+input: 32187645
+output: 1
+
+input: 32187546
+output: 1
+
+input: 32187456
+output: 1
+
+input: 32187465
+output: 1
+
+input: 32184657
+output: 1
+
+input: 32184765
+output: 1
+
+input: 32184756
+output: 1
+
+input: 32184576
+output: 1
+
+input: 32184567
+output: 1
+
+input: 31245678
+output: 1
+
+input: 31245687
+output: 1
+
+input: 31245768
+output: 1
+
+input: 31245876
+output: 1
+
+input: 31245867
+output: 1
+
+input: 31246578
+output: 1
+
+input: 31246587
+output: 1
+
+input: 31247658
+output: 1
+
+input: 31247568
+output: 1
+
+input: 31248657
+output: 1
+
+input: 31248765
+output: 1
+
+input: 31248756
+output: 1
+
+input: 31248576
+output: 1
+
+input: 31248567
+output: 1
+
+input: 31254678
+output: 1
+
+input: 31254687
+output: 1
+
+input: 31254768
+output: 1
+
+input: 31254876
+output: 1
+
+input: 31254867
+output: 1
+
+input: 31265478
+output: 1
+
+input: 31265487
+output: 1
+
+input: 31264578
+output: 1
+
+input: 31264587
+output: 1
+
+input: 31275468
+output: 1
+
+input: 31276548
+output: 1
+
+input: 31276458
+output: 1
+
+input: 31274658
+output: 1
+
+input: 31274568
+output: 1
+
+input: 31285476
+output: 1
+
+input: 31285467
+output: 1
+
+input: 31286547
+output: 1
+
+input: 31286457
+output: 1
+
+input: 31287654
+output: 1
+
+input: 31287645
+output: 1
+
+input: 31287546
+output: 1
+
+input: 31287456
+output: 1
+
+input: 31287465
+output: 1
+
+input: 31284657
+output: 1
+
+input: 31284765
+output: 1
+
+input: 31284756
+output: 1
+
+input: 31284576
+output: 1
+
+input: 31284567
+output: 1
+
+input: 42135678
+output: 1
+
+input: 42135687
+output: 1
+
+input: 42135768
+output: 1
+
+input: 42135876
+output: 1
+
+input: 42135867
+output: 1
+
+input: 42136578
+output: 1
+
+input: 42136587
+output: 1
+
+input: 42137658
+output: 1
+
+input: 42137568
+output: 1
+
+input: 42138657
+output: 1
+
+input: 42138765
+output: 1
+
+input: 42138756
+output: 1
+
+input: 42138576
+output: 1
+
+input: 42138567
+output: 1
+
+input: 43215678
+output: 1
+
+input: 43215687
+output: 1
+
+input: 43215768
+output: 1
+
+input: 43215876
+output: 1
+
+input: 43215867
+output: 1
+
+input: 43216578
+output: 1
+
+input: 43216587
+output: 1
+
+input: 43217658
+output: 1
+
+input: 43217568
+output: 1
+
+input: 43218657
+output: 1
+
+input: 43218765
+output: 1
+
+input: 43218756
+output: 1
+
+input: 43218576
+output: 1
+
+input: 43218567
+output: 1
+
+input: 43125678
+output: 1
+
+input: 43125687
+output: 1
+
+input: 43125768
+output: 1
+
+input: 43125876
+output: 1
+
+input: 43125867
+output: 1
+
+input: 43126578
+output: 1
+
+input: 43126587
+output: 1
+
+input: 43127658
+output: 1
+
+input: 43127568
+output: 1
+
+input: 43128657
+output: 1
+
+input: 43128765
+output: 1
+
+input: 43128756
+output: 1
+
+input: 43128576
+output: 1
+
+input: 43128567
+output: 1
+
+input: 41325678
+output: 1
+
+input: 41325687
+output: 1
+
+input: 41325768
+output: 1
+
+input: 41325876
+output: 1
+
+input: 41325867
+output: 1
+
+input: 41326578
+output: 1
+
+input: 41326587
+output: 1
+
+input: 41327658
+output: 1
+
+input: 41327568
+output: 1
+
+input: 41328657
+output: 1
+
+input: 41328765
+output: 1
+
+input: 41328756
+output: 1
+
+input: 41328576
+output: 1
+
+input: 41328567
+output: 1
+
+input: 41235678
+output: 1
+
+input: 41235687
+output: 1
+
+input: 41235768
+output: 1
+
+input: 41235876
+output: 1
+
+input: 41235867
+output: 1
+
+input: 41236578
+output: 1
+
+input: 41236587
+output: 1
+
+input: 41237658
+output: 1
+
+input: 41237568
+output: 1
+
+input: 41238657
+output: 1
+
+input: 41238765
+output: 1
+
+input: 41238756
+output: 1
+
+input: 41238576
+output: 1
+
+input: 41238567
+output: 1
+
+input: 52143678
+output: 1
+
+input: 52143687
+output: 1
+
+input: 52143768
+output: 1
+
+input: 52143876
+output: 1
+
+input: 52143867
+output: 1
+
+input: 52134678
+output: 1
+
+input: 52134687
+output: 1
+
+input: 52134768
+output: 1
+
+input: 52134876
+output: 1
+
+input: 52134867
+output: 1
+
+input: 53214678
+output: 1
+
+input: 53214687
+output: 1
+
+input: 53214768
+output: 1
+
+input: 53214876
+output: 1
+
+input: 53214867
+output: 1
+
+input: 53124678
+output: 1
+
+input: 53124687
+output: 1
+
+input: 53124768
+output: 1
+
+input: 53124876
+output: 1
+
+input: 53124867
+output: 1
+
+input: 54321678
+output: 1
+
+input: 54321687
+output: 1
+
+input: 54321768
+output: 1
+
+input: 54321876
+output: 1
+
+input: 54321867
+output: 1
+
+input: 54312678
+output: 1
+
+input: 54312687
+output: 1
+
+input: 54312768
+output: 1
+
+input: 54312876
+output: 1
+
+input: 54312867
+output: 1
+
+input: 54213678
+output: 1
+
+input: 54213687
+output: 1
+
+input: 54213768
+output: 1
+
+input: 54213876
+output: 1
+
+input: 54213867
+output: 1
+
+input: 54123678
+output: 1
+
+input: 54123687
+output: 1
+
+input: 54123768
+output: 1
+
+input: 54123876
+output: 1
+
+input: 54123867
+output: 1
+
+input: 54132678
+output: 1
+
+input: 54132687
+output: 1
+
+input: 54132768
+output: 1
+
+input: 54132876
+output: 1
+
+input: 54132867
+output: 1
+
+input: 51324678
+output: 1
+
+input: 51324687
+output: 1
+
+input: 51324768
+output: 1
+
+input: 51324876
+output: 1
+
+input: 51324867
+output: 1
+
+input: 51432678
+output: 1
+
+input: 51432687
+output: 1
+
+input: 51432768
+output: 1
+
+input: 51432876
+output: 1
+
+input: 51432867
+output: 1
+
+input: 51423678
+output: 1
+
+input: 51423687
+output: 1
+
+input: 51423768
+output: 1
+
+input: 51423876
+output: 1
+
+input: 51423867
+output: 1
+
+input: 51243678
+output: 1
+
+input: 51243687
+output: 1
+
+input: 51243768
+output: 1
+
+input: 51243876
+output: 1
+
+input: 51243867
+output: 1
+
+input: 51234678
+output: 1
+
+input: 51234687
+output: 1
+
+input: 51234768
+output: 1
+
+input: 51234876
+output: 1
+
+input: 51234867
+output: 1
+
+input: 62143578
+output: 1
+
+input: 62143587
+output: 1
+
+input: 62154378
+output: 1
+
+input: 62154387
+output: 1
+
+input: 62153478
+output: 1
+
+input: 62153487
+output: 1
+
+input: 62135478
+output: 1
+
+input: 62135487
+output: 1
+
+input: 62134578
+output: 1
+
+input: 62134587
+output: 1
+
+input: 63215478
+output: 1
+
+input: 63215487
+output: 1
+
+input: 63214578
+output: 1
+
+input: 63214587
+output: 1
+
+input: 63125478
+output: 1
+
+input: 63125487
+output: 1
+
+input: 63124578
+output: 1
+
+input: 63124587
+output: 1
+
+input: 64321578
+output: 1
+
+input: 64321587
+output: 1
+
+input: 64312578
+output: 1
+
+input: 64312587
+output: 1
+
+input: 64213578
+output: 1
+
+input: 64213587
+output: 1
+
+input: 64123578
+output: 1
+
+input: 64123587
+output: 1
+
+input: 64132578
+output: 1
+
+input: 64132587
+output: 1
+
+input: 65321478
+output: 1
+
+input: 65321487
+output: 1
+
+input: 65312478
+output: 1
+
+input: 65312487
+output: 1
+
+input: 65432178
+output: 1
+
+input: 65432187
+output: 1
+
+input: 65431278
+output: 1
+
+input: 65431287
+output: 1
+
+input: 65421378
+output: 1
+
+input: 65421387
+output: 1
+
+input: 65412378
+output: 1
+
+input: 65412387
+output: 1
+
+input: 65413278
+output: 1
+
+input: 65413287
+output: 1
+
+input: 65213478
+output: 1
+
+input: 65213487
+output: 1
+
+input: 65214378
+output: 1
+
+input: 65214387
+output: 1
+
+input: 65142378
+output: 1
+
+input: 65142387
+output: 1
+
+input: 65143278
+output: 1
+
+input: 65143287
+output: 1
+
+input: 65124378
+output: 1
+
+input: 65124387
+output: 1
+
+input: 65123478
+output: 1
+
+input: 65123487
+output: 1
+
+input: 65132478
+output: 1
+
+input: 65132487
+output: 1
+
+input: 61325478
+output: 1
+
+input: 61325487
+output: 1
+
+input: 61324578
+output: 1
+
+input: 61324587
+output: 1
+
+input: 61432578
+output: 1
+
+input: 61432587
+output: 1
+
+input: 61423578
+output: 1
+
+input: 61423587
+output: 1
+
+input: 61543278
+output: 1
+
+input: 61543287
+output: 1
+
+input: 61542378
+output: 1
+
+input: 61542387
+output: 1
+
+input: 61532478
+output: 1
+
+input: 61532487
+output: 1
+
+input: 61523478
+output: 1
+
+input: 61523487
+output: 1
+
+input: 61524378
+output: 1
+
+input: 61524387
+output: 1
+
+input: 61243578
+output: 1
+
+input: 61243587
+output: 1
+
+input: 61254378
+output: 1
+
+input: 61254387
+output: 1
+
+input: 61253478
+output: 1
+
+input: 61253487
+output: 1
+
+input: 61235478
+output: 1
+
+input: 61235487
+output: 1
+
+input: 61234578
+output: 1
+
+input: 61234587
+output: 1
+
+input: 72143658
+output: 1
+
+input: 72143568
+output: 1
+
+input: 72154368
+output: 1
+
+input: 72153468
+output: 1
+
+input: 72165438
+output: 1
+
+input: 72165348
+output: 1
+
+input: 72164358
+output: 1
+
+input: 72163458
+output: 1
+
+input: 72163548
+output: 1
+
+input: 72135468
+output: 1
+
+input: 72136548
+output: 1
+
+input: 72136458
+output: 1
+
+input: 72134658
+output: 1
+
+input: 72134568
+output: 1
+
+input: 73215468
+output: 1
+
+input: 73216548
+output: 1
+
+input: 73216458
+output: 1
+
+input: 73214658
+output: 1
+
+input: 73214568
+output: 1
+
+input: 73125468
+output: 1
+
+input: 73126548
+output: 1
+
+input: 73126458
+output: 1
+
+input: 73124658
+output: 1
+
+input: 73124568
+output: 1
+
+input: 74321658
+output: 1
+
+input: 74321568
+output: 1
+
+input: 74312658
+output: 1
+
+input: 74312568
+output: 1
+
+input: 74213658
+output: 1
+
+input: 74213568
+output: 1
+
+input: 74123658
+output: 1
+
+input: 74123568
+output: 1
+
+input: 74132658
+output: 1
+
+input: 74132568
+output: 1
+
+input: 75321468
+output: 1
+
+input: 75312468
+output: 1
+
+input: 75432168
+output: 1
+
+input: 75431268
+output: 1
+
+input: 75421368
+output: 1
+
+input: 75412368
+output: 1
+
+input: 75413268
+output: 1
+
+input: 75213468
+output: 1
+
+input: 75214368
+output: 1
+
+input: 75142368
+output: 1
+
+input: 75143268
+output: 1
+
+input: 75124368
+output: 1
+
+input: 75123468
+output: 1
+
+input: 75132468
+output: 1
+
+input: 76321458
+output: 1
+
+input: 76321548
+output: 1
+
+input: 76312548
+output: 1
+
+input: 76312458
+output: 1
+
+input: 76432158
+output: 1
+
+input: 76431258
+output: 1
+
+input: 76421358
+output: 1
+
+input: 76412358
+output: 1
+
+input: 76413258
+output: 1
+
+input: 76543218
+output: 1
+
+input: 76543128
+output: 1
+
+input: 76542138
+output: 1
+
+input: 76541238
+output: 1
+
+input: 76541328
+output: 1
+
+input: 76532148
+output: 1
+
+input: 76531248
+output: 1
+
+input: 76521438
+output: 1
+
+input: 76521348
+output: 1
+
+input: 76513248
+output: 1
+
+input: 76512348
+output: 1
+
+input: 76512438
+output: 1
+
+input: 76514238
+output: 1
+
+input: 76514328
+output: 1
+
+input: 76215348
+output: 1
+
+input: 76215438
+output: 1
+
+input: 76213548
+output: 1
+
+input: 76213458
+output: 1
+
+input: 76214358
+output: 1
+
+input: 76142358
+output: 1
+
+input: 76143258
+output: 1
+
+input: 76154238
+output: 1
+
+input: 76154328
+output: 1
+
+input: 76152438
+output: 1
+
+input: 76152348
+output: 1
+
+input: 76153248
+output: 1
+
+input: 76125438
+output: 1
+
+input: 76125348
+output: 1
+
+input: 76124358
+output: 1
+
+input: 76123458
+output: 1
+
+input: 76123548
+output: 1
+
+input: 76132548
+output: 1
+
+input: 76132458
+output: 1
+
+input: 71325468
+output: 1
+
+input: 71326548
+output: 1
+
+input: 71326458
+output: 1
+
+input: 71324658
+output: 1
+
+input: 71324568
+output: 1
+
+input: 71432658
+output: 1
+
+input: 71432568
+output: 1
+
+input: 71423658
+output: 1
+
+input: 71423568
+output: 1
+
+input: 71543268
+output: 1
+
+input: 71542368
+output: 1
+
+input: 71532468
+output: 1
+
+input: 71523468
+output: 1
+
+input: 71524368
+output: 1
+
+input: 71643258
+output: 1
+
+input: 71642358
+output: 1
+
+input: 71654328
+output: 1
+
+input: 71654238
+output: 1
+
+input: 71653248
+output: 1
+
+input: 71652348
+output: 1
+
+input: 71652438
+output: 1
+
+input: 71632458
+output: 1
+
+input: 71632548
+output: 1
+
+input: 71625348
+output: 1
+
+input: 71625438
+output: 1
+
+input: 71623548
+output: 1
+
+input: 71623458
+output: 1
+
+input: 71624358
+output: 1
+
+input: 71243658
+output: 1
+
+input: 71243568
+output: 1
+
+input: 71254368
+output: 1
+
+input: 71253468
+output: 1
+
+input: 71265438
+output: 1
+
+input: 71265348
+output: 1
+
+input: 71264358
+output: 1
+
+input: 71263458
+output: 1
+
+input: 71263548
+output: 1
+
+input: 71235468
+output: 1
+
+input: 71236548
+output: 1
+
+input: 71236458
+output: 1
+
+input: 71234658
+output: 1
+
+input: 71234568
+output: 1
+
+input: 82143657
+output: 1
+
+input: 82143765
+output: 1
+
+input: 82143756
+output: 1
+
+input: 82143576
+output: 1
+
+input: 82143567
+output: 1
+
+input: 82154376
+output: 1
+
+input: 82154367
+output: 1
+
+input: 82153476
+output: 1
+
+input: 82153467
+output: 1
+
+input: 82165437
+output: 1
+
+input: 82165347
+output: 1
+
+input: 82164357
+output: 1
+
+input: 82163457
+output: 1
+
+input: 82163547
+output: 1
+
+input: 82175436
+output: 1
+
+input: 82175346
+output: 1
+
+input: 82176543
+output: 1
+
+input: 82176534
+output: 1
+
+input: 82176435
+output: 1
+
+input: 82176345
+output: 1
+
+input: 82176354
+output: 1
+
+input: 82174356
+output: 1
+
+input: 82174365
+output: 1
+
+input: 82173645
+output: 1
+
+input: 82173654
+output: 1
+
+input: 82173465
+output: 1
+
+input: 82173456
+output: 1
+
+input: 82173546
+output: 1
+
+input: 82135476
+output: 1
+
+input: 82135467
+output: 1
+
+input: 82136547
+output: 1
+
+input: 82136457
+output: 1
+
+input: 82137654
+output: 1
+
+input: 82137645
+output: 1
+
+input: 82137546
+output: 1
+
+input: 82137456
+output: 1
+
+input: 82137465
+output: 1
+
+input: 82134657
+output: 1
+
+input: 82134765
+output: 1
+
+input: 82134756
+output: 1
+
+input: 82134576
+output: 1
+
+input: 82134567
+output: 1
+
+input: 83215476
+output: 1
+
+input: 83215467
+output: 1
+
+input: 83216547
+output: 1
+
+input: 83216457
+output: 1
+
+input: 83217654
+output: 1
+
+input: 83217645
+output: 1
+
+input: 83217546
+output: 1
+
+input: 83217456
+output: 1
+
+input: 83217465
+output: 1
+
+input: 83214657
+output: 1
+
+input: 83214765
+output: 1
+
+input: 83214756
+output: 1
+
+input: 83214576
+output: 1
+
+input: 83214567
+output: 1
+
+input: 83125476
+output: 1
+
+input: 83125467
+output: 1
+
+input: 83126547
+output: 1
+
+input: 83126457
+output: 1
+
+input: 83127654
+output: 1
+
+input: 83127645
+output: 1
+
+input: 83127546
+output: 1
+
+input: 83127456
+output: 1
+
+input: 83127465
+output: 1
+
+input: 83124657
+output: 1
+
+input: 83124765
+output: 1
+
+input: 83124756
+output: 1
+
+input: 83124576
+output: 1
+
+input: 83124567
+output: 1
+
+input: 84321657
+output: 1
+
+input: 84321765
+output: 1
+
+input: 84321756
+output: 1
+
+input: 84321576
+output: 1
+
+input: 84321567
+output: 1
+
+input: 84312657
+output: 1
+
+input: 84312765
+output: 1
+
+input: 84312756
+output: 1
+
+input: 84312576
+output: 1
+
+input: 84312567
+output: 1
+
+input: 84213657
+output: 1
+
+input: 84213765
+output: 1
+
+input: 84213756
+output: 1
+
+input: 84213576
+output: 1
+
+input: 84213567
+output: 1
+
+input: 84123657
+output: 1
+
+input: 84123765
+output: 1
+
+input: 84123756
+output: 1
+
+input: 84123576
+output: 1
+
+input: 84123567
+output: 1
+
+input: 84132657
+output: 1
+
+input: 84132765
+output: 1
+
+input: 84132756
+output: 1
+
+input: 84132576
+output: 1
+
+input: 84132567
+output: 1
+
+input: 85321476
+output: 1
+
+input: 85321467
+output: 1
+
+input: 85312476
+output: 1
+
+input: 85312467
+output: 1
+
+input: 85432176
+output: 1
+
+input: 85432167
+output: 1
+
+input: 85431276
+output: 1
+
+input: 85431267
+output: 1
+
+input: 85421376
+output: 1
+
+input: 85421367
+output: 1
+
+input: 85412376
+output: 1
+
+input: 85412367
+output: 1
+
+input: 85413276
+output: 1
+
+input: 85413267
+output: 1
+
+input: 85213476
+output: 1
+
+input: 85213467
+output: 1
+
+input: 85214376
+output: 1
+
+input: 85214367
+output: 1
+
+input: 85142376
+output: 1
+
+input: 85142367
+output: 1
+
+input: 85143276
+output: 1
+
+input: 85143267
+output: 1
+
+input: 85124376
+output: 1
+
+input: 85124367
+output: 1
+
+input: 85123476
+output: 1
+
+input: 85123467
+output: 1
+
+input: 85132476
+output: 1
+
+input: 85132467
+output: 1
+
+input: 86321457
+output: 1
+
+input: 86321547
+output: 1
+
+input: 86312547
+output: 1
+
+input: 86312457
+output: 1
+
+input: 86432157
+output: 1
+
+input: 86431257
+output: 1
+
+input: 86421357
+output: 1
+
+input: 86412357
+output: 1
+
+input: 86413257
+output: 1
+
+input: 86543217
+output: 1
+
+input: 86543127
+output: 1
+
+input: 86542137
+output: 1
+
+input: 86541237
+output: 1
+
+input: 86541327
+output: 1
+
+input: 86532147
+output: 1
+
+input: 86531247
+output: 1
+
+input: 86521437
+output: 1
+
+input: 86521347
+output: 1
+
+input: 86513247
+output: 1
+
+input: 86512347
+output: 1
+
+input: 86512437
+output: 1
+
+input: 86514237
+output: 1
+
+input: 86514327
+output: 1
+
+input: 86215347
+output: 1
+
+input: 86215437
+output: 1
+
+input: 86213547
+output: 1
+
+input: 86213457
+output: 1
+
+input: 86214357
+output: 1
+
+input: 86142357
+output: 1
+
+input: 86143257
+output: 1
+
+input: 86154237
+output: 1
+
+input: 86154327
+output: 1
+
+input: 86152437
+output: 1
+
+input: 86152347
+output: 1
+
+input: 86153247
+output: 1
+
+input: 86125437
+output: 1
+
+input: 86125347
+output: 1
+
+input: 86124357
+output: 1
+
+input: 86123457
+output: 1
+
+input: 86123547
+output: 1
+
+input: 86132547
+output: 1
+
+input: 86132457
+output: 1
+
+input: 87321645
+output: 1
+
+input: 87321654
+output: 1
+
+input: 87321465
+output: 1
+
+input: 87321456
+output: 1
+
+input: 87321546
+output: 1
+
+input: 87312654
+output: 1
+
+input: 87312645
+output: 1
+
+input: 87312546
+output: 1
+
+input: 87312456
+output: 1
+
+input: 87312465
+output: 1
+
+input: 87432156
+output: 1
+
+input: 87432165
+output: 1
+
+input: 87431265
+output: 1
+
+input: 87431256
+output: 1
+
+input: 87421365
+output: 1
+
+input: 87421356
+output: 1
+
+input: 87412356
+output: 1
+
+input: 87412365
+output: 1
+
+input: 87413265
+output: 1
+
+input: 87413256
+output: 1
+
+input: 87543216
+output: 1
+
+input: 87543126
+output: 1
+
+input: 87542136
+output: 1
+
+input: 87541236
+output: 1
+
+input: 87541326
+output: 1
+
+input: 87532146
+output: 1
+
+input: 87531246
+output: 1
+
+input: 87521436
+output: 1
+
+input: 87521346
+output: 1
+
+input: 87513246
+output: 1
+
+input: 87512346
+output: 1
+
+input: 87512436
+output: 1
+
+input: 87514236
+output: 1
+
+input: 87514326
+output: 1
+
+input: 87643215
+output: 1
+
+input: 87643125
+output: 1
+
+input: 87642135
+output: 1
+
+input: 87641325
+output: 1
+
+input: 87641235
+output: 1
+
+input: 87654321
+output: 1
+
+input: 87654312
+output: 1
+
+input: 87654213
+output: 1
+
+input: 87654123
+output: 1
+
+input: 87654132
+output: 1
+
+input: 87653214
+output: 1
+
+input: 87653124
+output: 1
+
+input: 87652143
+output: 1
+
+input: 87652134
+output: 1
+
+input: 87651324
+output: 1
+
+input: 87651234
+output: 1
+
+input: 87651243
+output: 1
+
+input: 87651423
+output: 1
+
+input: 87651432
+output: 1
+
+input: 87632154
+output: 1
+
+input: 87632145
+output: 1
+
+input: 87631245
+output: 1
+
+input: 87631254
+output: 1
+
+input: 87621345
+output: 1
+
+input: 87621354
+output: 1
+
+input: 87621435
+output: 1
+
+input: 87621543
+output: 1
+
+input: 87621534
+output: 1
+
+input: 87615324
+output: 1
+
+input: 87615234
+output: 1
+
+input: 87615243
+output: 1
+
+input: 87615423
+output: 1
+
+input: 87615432
+output: 1
+
+input: 87613254
+output: 1
+
+input: 87613245
+output: 1
+
+input: 87612354
+output: 1
+
+input: 87612345
+output: 1
+
+input: 87612534
+output: 1
+
+input: 87612543
+output: 1
+
+input: 87612435
+output: 1
+
+input: 87614325
+output: 1
+
+input: 87614235
+output: 1
+
+input: 87215346
+output: 1
+
+input: 87215436
+output: 1
+
+input: 87216534
+output: 1
+
+input: 87216543
+output: 1
+
+input: 87216354
+output: 1
+
+input: 87216345
+output: 1
+
+input: 87216435
+output: 1
+
+input: 87213654
+output: 1
+
+input: 87213645
+output: 1
+
+input: 87213546
+output: 1
+
+input: 87213456
+output: 1
+
+input: 87213465
+output: 1
+
+input: 87214365
+output: 1
+
+input: 87214356
+output: 1
+
+input: 87142356
+output: 1
+
+input: 87142365
+output: 1
+
+input: 87143265
+output: 1
+
+input: 87143256
+output: 1
+
+input: 87154236
+output: 1
+
+input: 87154326
+output: 1
+
+input: 87152436
+output: 1
+
+input: 87152346
+output: 1
+
+input: 87153246
+output: 1
+
+input: 87165423
+output: 1
+
+input: 87165432
+output: 1
+
+input: 87165243
+output: 1
+
+input: 87165234
+output: 1
+
+input: 87165324
+output: 1
+
+input: 87164235
+output: 1
+
+input: 87164325
+output: 1
+
+input: 87162435
+output: 1
+
+input: 87162543
+output: 1
+
+input: 87162534
+output: 1
+
+input: 87162354
+output: 1
+
+input: 87162345
+output: 1
+
+input: 87163245
+output: 1
+
+input: 87163254
+output: 1
+
+input: 87125436
+output: 1
+
+input: 87125346
+output: 1
+
+input: 87126543
+output: 1
+
+input: 87126534
+output: 1
+
+input: 87126435
+output: 1
+
+input: 87126345
+output: 1
+
+input: 87126354
+output: 1
+
+input: 87124356
+output: 1
+
+input: 87124365
+output: 1
+
+input: 87123645
+output: 1
+
+input: 87123654
+output: 1
+
+input: 87123465
+output: 1
+
+input: 87123456
+output: 1
+
+input: 87123546
+output: 1
+
+input: 87132654
+output: 1
+
+input: 87132645
+output: 1
+
+input: 87132546
+output: 1
+
+input: 87132456
+output: 1
+
+input: 87132465
+output: 1
+
+input: 81325476
+output: 1
+
+input: 81325467
+output: 1
+
+input: 81326547
+output: 1
+
+input: 81326457
+output: 1
+
+input: 81327654
+output: 1
+
+input: 81327645
+output: 1
+
+input: 81327546
+output: 1
+
+input: 81327456
+output: 1
+
+input: 81327465
+output: 1
+
+input: 81324657
+output: 1
+
+input: 81324765
+output: 1
+
+input: 81324756
+output: 1
+
+input: 81324576
+output: 1
+
+input: 81324567
+output: 1
+
+input: 81432657
+output: 1
+
+input: 81432765
+output: 1
+
+input: 81432756
+output: 1
+
+input: 81432576
+output: 1
+
+input: 81432567
+output: 1
+
+input: 81423657
+output: 1
+
+input: 81423765
+output: 1
+
+input: 81423756
+output: 1
+
+input: 81423576
+output: 1
+
+input: 81423567
+output: 1
+
+input: 81543276
+output: 1
+
+input: 81543267
+output: 1
+
+input: 81542376
+output: 1
+
+input: 81542367
+output: 1
+
+input: 81532476
+output: 1
+
+input: 81532467
+output: 1
+
+input: 81523476
+output: 1
+
+input: 81523467
+output: 1
+
+input: 81524376
+output: 1
+
+input: 81524367
+output: 1
+
+input: 81643257
+output: 1
+
+input: 81642357
+output: 1
+
+input: 81654327
+output: 1
+
+input: 81654237
+output: 1
+
+input: 81653247
+output: 1
+
+input: 81652347
+output: 1
+
+input: 81652437
+output: 1
+
+input: 81632457
+output: 1
+
+input: 81632547
+output: 1
+
+input: 81625347
+output: 1
+
+input: 81625437
+output: 1
+
+input: 81623547
+output: 1
+
+input: 81623457
+output: 1
+
+input: 81624357
+output: 1
+
+input: 81743256
+output: 1
+
+input: 81743265
+output: 1
+
+input: 81742365
+output: 1
+
+input: 81742356
+output: 1
+
+input: 81754326
+output: 1
+
+input: 81754236
+output: 1
+
+input: 81753246
+output: 1
+
+input: 81752346
+output: 1
+
+input: 81752436
+output: 1
+
+input: 81765432
+output: 1
+
+input: 81765423
+output: 1
+
+input: 81765324
+output: 1
+
+input: 81765234
+output: 1
+
+input: 81765243
+output: 1
+
+input: 81764325
+output: 1
+
+input: 81764235
+output: 1
+
+input: 81763254
+output: 1
+
+input: 81763245
+output: 1
+
+input: 81762435
+output: 1
+
+input: 81762345
+output: 1
+
+input: 81762354
+output: 1
+
+input: 81762534
+output: 1
+
+input: 81762543
+output: 1
+
+input: 81732645
+output: 1
+
+input: 81732654
+output: 1
+
+input: 81732465
+output: 1
+
+input: 81732456
+output: 1
+
+input: 81732546
+output: 1
+
+input: 81725346
+output: 1
+
+input: 81725436
+output: 1
+
+input: 81726534
+output: 1
+
+input: 81726543
+output: 1
+
+input: 81726354
+output: 1
+
+input: 81726345
+output: 1
+
+input: 81726435
+output: 1
+
+input: 81723654
+output: 1
+
+input: 81723645
+output: 1
+
+input: 81723546
+output: 1
+
+input: 81723456
+output: 1
+
+input: 81723465
+output: 1
+
+input: 81724365
+output: 1
+
+input: 81724356
+output: 1
+
+input: 81243657
+output: 1
+
+input: 81243765
+output: 1
+
+input: 81243756
+output: 1
+
+input: 81243576
+output: 1
+
+input: 81243567
+output: 1
+
+input: 81254376
+output: 1
+
+input: 81254367
+output: 1
+
+input: 81253476
+output: 1
+
+input: 81253467
+output: 1
+
+input: 81265437
+output: 1
+
+input: 81265347
+output: 1
+
+input: 81264357
+output: 1
+
+input: 81263457
+output: 1
+
+input: 81263547
+output: 1
+
+input: 81275436
+output: 1
+
+input: 81275346
+output: 1
+
+input: 81276543
+output: 1
+
+input: 81276534
+output: 1
+
+input: 81276435
+output: 1
+
+input: 81276345
+output: 1
+
+input: 81276354
+output: 1
+
+input: 81274356
+output: 1
+
+input: 81274365
+output: 1
+
+input: 81273645
+output: 1
+
+input: 81273654
+output: 1
+
+input: 81273465
+output: 1
+
+input: 81273456
+output: 1
+
+input: 81273546
+output: 1
+
+input: 81235476
+output: 1
+
+input: 81235467
+output: 1
+
+input: 81236547
+output: 1
+
+input: 81236457
+output: 1
+
+input: 81237654
+output: 1
+
+input: 81237645
+output: 1
+
+input: 81237546
+output: 1
+
+input: 81237456
+output: 1
+
+input: 81237465
+output: 1
+
+input: 81234657
+output: 1
+
+input: 81234765
+output: 1
+
+input: 81234756
+output: 1
+
+input: 81234576
+output: 1
+
+input: 81234567
+output: 1
+

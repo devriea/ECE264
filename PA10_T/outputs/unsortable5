@@ -1,0 +1,234 @@
+input: 12453
+output: 0
+
+input: 13425
+output: 0
+
+input: 13452
+output: 0
+
+input: 13542
+output: 0
+
+input: 13524
+output: 0
+
+input: 14352
+output: 0
+
+input: 14253
+output: 0
+
+input: 14523
+output: 0
+
+input: 14532
+output: 0
+
+input: 15342
+output: 0
+
+input: 21453
+output: 0
+
+input: 23145
+output: 0
+
+input: 23154
+output: 0
+
+input: 23415
+output: 0
+
+input: 23451
+output: 0
+
+input: 23541
+output: 0
+
+input: 23514
+output: 0
+
+input: 24315
+output: 0
+
+input: 24351
+output: 0
+
+input: 24135
+output: 0
+
+input: 24153
+output: 0
+
+input: 24513
+output: 0
+
+input: 24531
+output: 0
+
+input: 25341
+output: 0
+
+input: 25314
+output: 0
+
+input: 25431
+output: 0
+
+input: 25413
+output: 0
+
+input: 25143
+output: 0
+
+input: 25134
+output: 0
+
+input: 32415
+output: 0
+
+input: 32451
+output: 0
+
+input: 32541
+output: 0
+
+input: 32514
+output: 0
+
+input: 31425
+output: 0
+
+input: 31452
+output: 0
+
+input: 31542
+output: 0
+
+input: 31524
+output: 0
+
+input: 34125
+output: 0
+
+input: 34152
+output: 0
+
+input: 34215
+output: 0
+
+input: 34251
+output: 0
+
+input: 34521
+output: 0
+
+input: 34512
+output: 0
+
+input: 35142
+output: 0
+
+input: 35124
+output: 0
+
+input: 35412
+output: 0
+
+input: 35421
+output: 0
+
+input: 35241
+output: 0
+
+input: 35214
+output: 0
+
+input: 42315
+output: 0
+
+input: 42351
+output: 0
+
+input: 42153
+output: 0
+
+input: 42513
+output: 0
+
+input: 42531
+output: 0
+
+input: 43251
+output: 0
+
+input: 43152
+output: 0
+
+input: 43512
+output: 0
+
+input: 43521
+output: 0
+
+input: 41352
+output: 0
+
+input: 41253
+output: 0
+
+input: 41523
+output: 0
+
+input: 41532
+output: 0
+
+input: 45312
+output: 0
+
+input: 45321
+output: 0
+
+input: 45132
+output: 0
+
+input: 45123
+output: 0
+
+input: 45213
+output: 0
+
+input: 45231
+output: 0
+
+input: 52341
+output: 0
+
+input: 52314
+output: 0
+
+input: 52431
+output: 0
+
+input: 52413
+output: 0
+
+input: 53241
+output: 0
+
+input: 53421
+output: 0
+
+input: 53412
+output: 0
+
+input: 53142
+output: 0
+
+input: 54231
+output: 0
+
+input: 51342
+output: 0
+

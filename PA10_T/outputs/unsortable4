@@ -1,0 +1,30 @@
+input: 1342
+output: 0
+
+input: 2314
+output: 0
+
+input: 2341
+output: 0
+
+input: 2431
+output: 0
+
+input: 2413
+output: 0
+
+input: 3241
+output: 0
+
+input: 3142
+output: 0
+
+input: 3412
+output: 0
+
+input: 3421
+output: 0
+
+input: 4231
+output: 0
+

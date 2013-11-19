@@ -1,0 +1,1287 @@
+input: 1234567
+output: 1234567
+
+input: 1234576
+output: 1234567
+
+input: 1234657
+output: 1234567
+
+input: 1234765
+output: 1234567
+
+input: 1234756
+output: 1234567
+
+input: 1235467
+output: 1234567
+
+input: 1235476
+output: 1234567
+
+input: 1236547
+output: 1234567
+
+input: 1236457
+output: 1234567
+
+input: 1237546
+output: 1234567
+
+input: 1237654
+output: 1234567
+
+input: 1237645
+output: 1234567
+
+input: 1237465
+output: 1234567
+
+input: 1237456
+output: 1234567
+
+input: 1243567
+output: 1234567
+
+input: 1243576
+output: 1234567
+
+input: 1243657
+output: 1234567
+
+input: 1243765
+output: 1234567
+
+input: 1243756
+output: 1234567
+
+input: 1254367
+output: 1234567
+
+input: 1254376
+output: 1234567
+
+input: 1253467
+output: 1234567
+
+input: 1253476
+output: 1234567
+
+input: 1264357
+output: 1234567
+
+input: 1265437
+output: 1234567
+
+input: 1265347
+output: 1234567
+
+input: 1263547
+output: 1234567
+
+input: 1263457
+output: 1234567
+
+input: 1274365
+output: 1234567
+
+input: 1274356
+output: 1234567
+
+input: 1275436
+output: 1234567
+
+input: 1275346
+output: 1234567
+
+input: 1276543
+output: 1234567
+
+input: 1276534
+output: 1234567
+
+input: 1276435
+output: 1234567
+
+input: 1276345
+output: 1234567
+
+input: 1276354
+output: 1234567
+
+input: 1273546
+output: 1234567
+
+input: 1273654
+output: 1234567
+
+input: 1273645
+output: 1234567
+
+input: 1273465
+output: 1234567
+
+input: 1273456
+output: 1234567
+
+input: 1324567
+output: 1234567
+
+input: 1324576
+output: 1234567
+
+input: 1324657
+output: 1234567
+
+input: 1324765
+output: 1234567
+
+input: 1324756
+output: 1234567
+
+input: 1325467
+output: 1234567
+
+input: 1325476
+output: 1234567
+
+input: 1326547
+output: 1234567
+
+input: 1326457
+output: 1234567
+
+input: 1327546
+output: 1234567
+
+input: 1327654
+output: 1234567
+
+input: 1327645
+output: 1234567
+
+input: 1327465
+output: 1234567
+
+input: 1327456
+output: 1234567
+
+input: 1432567
+output: 1234567
+
+input: 1432576
+output: 1234567
+
+input: 1432657
+output: 1234567
+
+input: 1432765
+output: 1234567
+
+input: 1432756
+output: 1234567
+
+input: 1423567
+output: 1234567
+
+input: 1423576
+output: 1234567
+
+input: 1423657
+output: 1234567
+
+input: 1423765
+output: 1234567
+
+input: 1423756
+output: 1234567
+
+input: 1532467
+output: 1234567
+
+input: 1532476
+output: 1234567
+
+input: 1543267
+output: 1234567
+
+input: 1543276
+output: 1234567
+
+input: 1542367
+output: 1234567
+
+input: 1542376
+output: 1234567
+
+input: 1524367
+output: 1234567
+
+input: 1524376
+output: 1234567
+
+input: 1523467
+output: 1234567
+
+input: 1523476
+output: 1234567
+
+input: 1632547
+output: 1234567
+
+input: 1632457
+output: 1234567
+
+input: 1643257
+output: 1234567
+
+input: 1642357
+output: 1234567
+
+input: 1654327
+output: 1234567
+
+input: 1654237
+output: 1234567
+
+input: 1653247
+output: 1234567
+
+input: 1652347
+output: 1234567
+
+input: 1652437
+output: 1234567
+
+input: 1624357
+output: 1234567
+
+input: 1625437
+output: 1234567
+
+input: 1625347
+output: 1234567
+
+input: 1623547
+output: 1234567
+
+input: 1623457
+output: 1234567
+
+input: 1732546
+output: 1234567
+
+input: 1732654
+output: 1234567
+
+input: 1732645
+output: 1234567
+
+input: 1732465
+output: 1234567
+
+input: 1732456
+output: 1234567
+
+input: 1743265
+output: 1234567
+
+input: 1743256
+output: 1234567
+
+input: 1742365
+output: 1234567
+
+input: 1742356
+output: 1234567
+
+input: 1754326
+output: 1234567
+
+input: 1754236
+output: 1234567
+
+input: 1753246
+output: 1234567
+
+input: 1752346
+output: 1234567
+
+input: 1752436
+output: 1234567
+
+input: 1764325
+output: 1234567
+
+input: 1764235
+output: 1234567
+
+input: 1765432
+output: 1234567
+
+input: 1765423
+output: 1234567
+
+input: 1765324
+output: 1234567
+
+input: 1765234
+output: 1234567
+
+input: 1765243
+output: 1234567
+
+input: 1763245
+output: 1234567
+
+input: 1763254
+output: 1234567
+
+input: 1762534
+output: 1234567
+
+input: 1762543
+output: 1234567
+
+input: 1762354
+output: 1234567
+
+input: 1762345
+output: 1234567
+
+input: 1762435
+output: 1234567
+
+input: 1724365
+output: 1234567
+
+input: 1724356
+output: 1234567
+
+input: 1725436
+output: 1234567
+
+input: 1725346
+output: 1234567
+
+input: 1726543
+output: 1234567
+
+input: 1726534
+output: 1234567
+
+input: 1726435
+output: 1234567
+
+input: 1726345
+output: 1234567
+
+input: 1726354
+output: 1234567
+
+input: 1723546
+output: 1234567
+
+input: 1723654
+output: 1234567
+
+input: 1723645
+output: 1234567
+
+input: 1723465
+output: 1234567
+
+input: 1723456
+output: 1234567
+
+input: 2134567
+output: 1234567
+
+input: 2134576
+output: 1234567
+
+input: 2134657
+output: 1234567
+
+input: 2134765
+output: 1234567
+
+input: 2134756
+output: 1234567
+
+input: 2135467
+output: 1234567
+
+input: 2135476
+output: 1234567
+
+input: 2136547
+output: 1234567
+
+input: 2136457
+output: 1234567
+
+input: 2137546
+output: 1234567
+
+input: 2137654
+output: 1234567
+
+input: 2137645
+output: 1234567
+
+input: 2137465
+output: 1234567
+
+input: 2137456
+output: 1234567
+
+input: 2143567
+output: 1234567
+
+input: 2143576
+output: 1234567
+
+input: 2143657
+output: 1234567
+
+input: 2143765
+output: 1234567
+
+input: 2143756
+output: 1234567
+
+input: 2154367
+output: 1234567
+
+input: 2154376
+output: 1234567
+
+input: 2153467
+output: 1234567
+
+input: 2153476
+output: 1234567
+
+input: 2164357
+output: 1234567
+
+input: 2165437
+output: 1234567
+
+input: 2165347
+output: 1234567
+
+input: 2163547
+output: 1234567
+
+input: 2163457
+output: 1234567
+
+input: 2174365
+output: 1234567
+
+input: 2174356
+output: 1234567
+
+input: 2175436
+output: 1234567
+
+input: 2175346
+output: 1234567
+
+input: 2176543
+output: 1234567
+
+input: 2176534
+output: 1234567
+
+input: 2176435
+output: 1234567
+
+input: 2176345
+output: 1234567
+
+input: 2176354
+output: 1234567
+
+input: 2173546
+output: 1234567
+
+input: 2173654
+output: 1234567
+
+input: 2173645
+output: 1234567
+
+input: 2173465
+output: 1234567
+
+input: 2173456
+output: 1234567
+
+input: 3214567
+output: 1234567
+
+input: 3214576
+output: 1234567
+
+input: 3214657
+output: 1234567
+
+input: 3214765
+output: 1234567
+
+input: 3214756
+output: 1234567
+
+input: 3215467
+output: 1234567
+
+input: 3215476
+output: 1234567
+
+input: 3216547
+output: 1234567
+
+input: 3216457
+output: 1234567
+
+input: 3217546
+output: 1234567
+
+input: 3217654
+output: 1234567
+
+input: 3217645
+output: 1234567
+
+input: 3217465
+output: 1234567
+
+input: 3217456
+output: 1234567
+
+input: 3124567
+output: 1234567
+
+input: 3124576
+output: 1234567
+
+input: 3124657
+output: 1234567
+
+input: 3124765
+output: 1234567
+
+input: 3124756
+output: 1234567
+
+input: 3125467
+output: 1234567
+
+input: 3125476
+output: 1234567
+
+input: 3126547
+output: 1234567
+
+input: 3126457
+output: 1234567
+
+input: 3127546
+output: 1234567
+
+input: 3127654
+output: 1234567
+
+input: 3127645
+output: 1234567
+
+input: 3127465
+output: 1234567
+
+input: 3127456
+output: 1234567
+
+input: 4213567
+output: 1234567
+
+input: 4213576
+output: 1234567
+
+input: 4213657
+output: 1234567
+
+input: 4213765
+output: 1234567
+
+input: 4213756
+output: 1234567
+
+input: 4321567
+output: 1234567
+
+input: 4321576
+output: 1234567
+
+input: 4321657
+output: 1234567
+
+input: 4321765
+output: 1234567
+
+input: 4321756
+output: 1234567
+
+input: 4312567
+output: 1234567
+
+input: 4312576
+output: 1234567
+
+input: 4312657
+output: 1234567
+
+input: 4312765
+output: 1234567
+
+input: 4312756
+output: 1234567
+
+input: 4132567
+output: 1234567
+
+input: 4132576
+output: 1234567
+
+input: 4132657
+output: 1234567
+
+input: 4132765
+output: 1234567
+
+input: 4132756
+output: 1234567
+
+input: 4123567
+output: 1234567
+
+input: 4123576
+output: 1234567
+
+input: 4123657
+output: 1234567
+
+input: 4123765
+output: 1234567
+
+input: 4123756
+output: 1234567
+
+input: 5214367
+output: 1234567
+
+input: 5214376
+output: 1234567
+
+input: 5213467
+output: 1234567
+
+input: 5213476
+output: 1234567
+
+input: 5321467
+output: 1234567
+
+input: 5321476
+output: 1234567
+
+input: 5312467
+output: 1234567
+
+input: 5312476
+output: 1234567
+
+input: 5432167
+output: 1234567
+
+input: 5432176
+output: 1234567
+
+input: 5431267
+output: 1234567
+
+input: 5431276
+output: 1234567
+
+input: 5421367
+output: 1234567
+
+input: 5421376
+output: 1234567
+
+input: 5412367
+output: 1234567
+
+input: 5412376
+output: 1234567
+
+input: 5413267
+output: 1234567
+
+input: 5413276
+output: 1234567
+
+input: 5132467
+output: 1234567
+
+input: 5132476
+output: 1234567
+
+input: 5143267
+output: 1234567
+
+input: 5143276
+output: 1234567
+
+input: 5142367
+output: 1234567
+
+input: 5142376
+output: 1234567
+
+input: 5124367
+output: 1234567
+
+input: 5124376
+output: 1234567
+
+input: 5123467
+output: 1234567
+
+input: 5123476
+output: 1234567
+
+input: 6214357
+output: 1234567
+
+input: 6215437
+output: 1234567
+
+input: 6215347
+output: 1234567
+
+input: 6213547
+output: 1234567
+
+input: 6213457
+output: 1234567
+
+input: 6321547
+output: 1234567
+
+input: 6321457
+output: 1234567
+
+input: 6312547
+output: 1234567
+
+input: 6312457
+output: 1234567
+
+input: 6432157
+output: 1234567
+
+input: 6431257
+output: 1234567
+
+input: 6421357
+output: 1234567
+
+input: 6412357
+output: 1234567
+
+input: 6413257
+output: 1234567
+
+input: 6532147
+output: 1234567
+
+input: 6531247
+output: 1234567
+
+input: 6543217
+output: 1234567
+
+input: 6543127
+output: 1234567
+
+input: 6542137
+output: 1234567
+
+input: 6541237
+output: 1234567
+
+input: 6541327
+output: 1234567
+
+input: 6521347
+output: 1234567
+
+input: 6521437
+output: 1234567
+
+input: 6514237
+output: 1234567
+
+input: 6514327
+output: 1234567
+
+input: 6512437
+output: 1234567
+
+input: 6512347
+output: 1234567
+
+input: 6513247
+output: 1234567
+
+input: 6132547
+output: 1234567
+
+input: 6132457
+output: 1234567
+
+input: 6143257
+output: 1234567
+
+input: 6142357
+output: 1234567
+
+input: 6154327
+output: 1234567
+
+input: 6154237
+output: 1234567
+
+input: 6153247
+output: 1234567
+
+input: 6152347
+output: 1234567
+
+input: 6152437
+output: 1234567
+
+input: 6124357
+output: 1234567
+
+input: 6125437
+output: 1234567
+
+input: 6125347
+output: 1234567
+
+input: 6123547
+output: 1234567
+
+input: 6123457
+output: 1234567
+
+input: 7214365
+output: 1234567
+
+input: 7214356
+output: 1234567
+
+input: 7215436
+output: 1234567
+
+input: 7215346
+output: 1234567
+
+input: 7216543
+output: 1234567
+
+input: 7216534
+output: 1234567
+
+input: 7216435
+output: 1234567
+
+input: 7216345
+output: 1234567
+
+input: 7216354
+output: 1234567
+
+input: 7213546
+output: 1234567
+
+input: 7213654
+output: 1234567
+
+input: 7213645
+output: 1234567
+
+input: 7213465
+output: 1234567
+
+input: 7213456
+output: 1234567
+
+input: 7321546
+output: 1234567
+
+input: 7321654
+output: 1234567
+
+input: 7321645
+output: 1234567
+
+input: 7321465
+output: 1234567
+
+input: 7321456
+output: 1234567
+
+input: 7312546
+output: 1234567
+
+input: 7312654
+output: 1234567
+
+input: 7312645
+output: 1234567
+
+input: 7312465
+output: 1234567
+
+input: 7312456
+output: 1234567
+
+input: 7432165
+output: 1234567
+
+input: 7432156
+output: 1234567
+
+input: 7431265
+output: 1234567
+
+input: 7431256
+output: 1234567
+
+input: 7421365
+output: 1234567
+
+input: 7421356
+output: 1234567
+
+input: 7412365
+output: 1234567
+
+input: 7412356
+output: 1234567
+
+input: 7413265
+output: 1234567
+
+input: 7413256
+output: 1234567
+
+input: 7532146
+output: 1234567
+
+input: 7531246
+output: 1234567
+
+input: 7543216
+output: 1234567
+
+input: 7543126
+output: 1234567
+
+input: 7542136
+output: 1234567
+
+input: 7541236
+output: 1234567
+
+input: 7541326
+output: 1234567
+
+input: 7521346
+output: 1234567
+
+input: 7521436
+output: 1234567
+
+input: 7514236
+output: 1234567
+
+input: 7514326
+output: 1234567
+
+input: 7512436
+output: 1234567
+
+input: 7512346
+output: 1234567
+
+input: 7513246
+output: 1234567
+
+input: 7632145
+output: 1234567
+
+input: 7632154
+output: 1234567
+
+input: 7631254
+output: 1234567
+
+input: 7631245
+output: 1234567
+
+input: 7643215
+output: 1234567
+
+input: 7643125
+output: 1234567
+
+input: 7642135
+output: 1234567
+
+input: 7641235
+output: 1234567
+
+input: 7641325
+output: 1234567
+
+input: 7654321
+output: 1234567
+
+input: 7654312
+output: 1234567
+
+input: 7654213
+output: 1234567
+
+input: 7654123
+output: 1234567
+
+input: 7654132
+output: 1234567
+
+input: 7653214
+output: 1234567
+
+input: 7653124
+output: 1234567
+
+input: 7652143
+output: 1234567
+
+input: 7652134
+output: 1234567
+
+input: 7651324
+output: 1234567
+
+input: 7651234
+output: 1234567
+
+input: 7651243
+output: 1234567
+
+input: 7651423
+output: 1234567
+
+input: 7651432
+output: 1234567
+
+input: 7621534
+output: 1234567
+
+input: 7621543
+output: 1234567
+
+input: 7621354
+output: 1234567
+
+input: 7621345
+output: 1234567
+
+input: 7621435
+output: 1234567
+
+input: 7614235
+output: 1234567
+
+input: 7614325
+output: 1234567
+
+input: 7615423
+output: 1234567
+
+input: 7615432
+output: 1234567
+
+input: 7615243
+output: 1234567
+
+input: 7615234
+output: 1234567
+
+input: 7615324
+output: 1234567
+
+input: 7612543
+output: 1234567
+
+input: 7612534
+output: 1234567
+
+input: 7612435
+output: 1234567
+
+input: 7612345
+output: 1234567
+
+input: 7612354
+output: 1234567
+
+input: 7613254
+output: 1234567
+
+input: 7613245
+output: 1234567
+
+input: 7132546
+output: 1234567
+
+input: 7132654
+output: 1234567
+
+input: 7132645
+output: 1234567
+
+input: 7132465
+output: 1234567
+
+input: 7132456
+output: 1234567
+
+input: 7143265
+output: 1234567
+
+input: 7143256
+output: 1234567
+
+input: 7142365
+output: 1234567
+
+input: 7142356
+output: 1234567
+
+input: 7154326
+output: 1234567
+
+input: 7154236
+output: 1234567
+
+input: 7153246
+output: 1234567
+
+input: 7152346
+output: 1234567
+
+input: 7152436
+output: 1234567
+
+input: 7164325
+output: 1234567
+
+input: 7164235
+output: 1234567
+
+input: 7165432
+output: 1234567
+
+input: 7165423
+output: 1234567
+
+input: 7165324
+output: 1234567
+
+input: 7165234
+output: 1234567
+
+input: 7165243
+output: 1234567
+
+input: 7163245
+output: 1234567
+
+input: 7163254
+output: 1234567
+
+input: 7162534
+output: 1234567
+
+input: 7162543
+output: 1234567
+
+input: 7162354
+output: 1234567
+
+input: 7162345
+output: 1234567
+
+input: 7162435
+output: 1234567
+
+input: 7124365
+output: 1234567
+
+input: 7124356
+output: 1234567
+
+input: 7125436
+output: 1234567
+
+input: 7125346
+output: 1234567
+
+input: 7126543
+output: 1234567
+
+input: 7126534
+output: 1234567
+
+input: 7126435
+output: 1234567
+
+input: 7126345
+output: 1234567
+
+input: 7126354
+output: 1234567
+
+input: 7123546
+output: 1234567
+
+input: 7123654
+output: 1234567
+
+input: 7123645
+output: 1234567
+
+input: 7123465
+output: 1234567
+
+input: 7123456
+output: 1234567
+

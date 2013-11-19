@@ -1,0 +1,42 @@
+input: 1234
+output: 1
+
+input: 1243
+output: 1
+
+input: 1324
+output: 1
+
+input: 1432
+output: 1
+
+input: 1423
+output: 1
+
+input: 2134
+output: 1
+
+input: 2143
+output: 1
+
+input: 3214
+output: 1
+
+input: 3124
+output: 1
+
+input: 4213
+output: 1
+
+input: 4321
+output: 1
+
+input: 4312
+output: 1
+
+input: 4132
+output: 1
+
+input: 4123
+output: 1
+

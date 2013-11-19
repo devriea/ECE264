@@ -1,0 +1,15 @@
+input: 123
+output: 123
+
+input: 132
+output: 123
+
+input: 213
+output: 123
+
+input: 321
+output: 123
+
+input: 312
+output: 123
+

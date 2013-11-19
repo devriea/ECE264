@@ -1,0 +1,126 @@
+input: 12345
+output: 1
+
+input: 12354
+output: 1
+
+input: 12435
+output: 1
+
+input: 12543
+output: 1
+
+input: 12534
+output: 1
+
+input: 13245
+output: 1
+
+input: 13254
+output: 1
+
+input: 14325
+output: 1
+
+input: 14235
+output: 1
+
+input: 15324
+output: 1
+
+input: 15432
+output: 1
+
+input: 15423
+output: 1
+
+input: 15243
+output: 1
+
+input: 15234
+output: 1
+
+input: 21345
+output: 1
+
+input: 21354
+output: 1
+
+input: 21435
+output: 1
+
+input: 21543
+output: 1
+
+input: 21534
+output: 1
+
+input: 32145
+output: 1
+
+input: 32154
+output: 1
+
+input: 31245
+output: 1
+
+input: 31254
+output: 1
+
+input: 42135
+output: 1
+
+input: 43215
+output: 1
+
+input: 43125
+output: 1
+
+input: 41325
+output: 1
+
+input: 41235
+output: 1
+
+input: 52143
+output: 1
+
+input: 52134
+output: 1
+
+input: 53214
+output: 1
+
+input: 53124
+output: 1
+
+input: 54321
+output: 1
+
+input: 54312
+output: 1
+
+input: 54213
+output: 1
+
+input: 54123
+output: 1
+
+input: 54132
+output: 1
+
+input: 51324
+output: 1
+
+input: 51432
+output: 1
+
+input: 51423
+output: 1
+
+input: 51243
+output: 1
+
+input: 51234
+output: 1
+

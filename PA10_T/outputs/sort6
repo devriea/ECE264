@@ -1,0 +1,396 @@
+input: 123456
+output: 123456
+
+input: 123465
+output: 123456
+
+input: 123546
+output: 123456
+
+input: 123654
+output: 123456
+
+input: 123645
+output: 123456
+
+input: 124356
+output: 123456
+
+input: 124365
+output: 123456
+
+input: 125436
+output: 123456
+
+input: 125346
+output: 123456
+
+input: 126435
+output: 123456
+
+input: 126543
+output: 123456
+
+input: 126534
+output: 123456
+
+input: 126354
+output: 123456
+
+input: 126345
+output: 123456
+
+input: 132456
+output: 123456
+
+input: 132465
+output: 123456
+
+input: 132546
+output: 123456
+
+input: 132654
+output: 123456
+
+input: 132645
+output: 123456
+
+input: 143256
+output: 123456
+
+input: 143265
+output: 123456
+
+input: 142356
+output: 123456
+
+input: 142365
+output: 123456
+
+input: 153246
+output: 123456
+
+input: 154326
+output: 123456
+
+input: 154236
+output: 123456
+
+input: 152436
+output: 123456
+
+input: 152346
+output: 123456
+
+input: 163254
+output: 123456
+
+input: 163245
+output: 123456
+
+input: 164325
+output: 123456
+
+input: 164235
+output: 123456
+
+input: 165432
+output: 123456
+
+input: 165423
+output: 123456
+
+input: 165324
+output: 123456
+
+input: 165234
+output: 123456
+
+input: 165243
+output: 123456
+
+input: 162435
+output: 123456
+
+input: 162543
+output: 123456
+
+input: 162534
+output: 123456
+
+input: 162354
+output: 123456
+
+input: 162345
+output: 123456
+
+input: 213456
+output: 123456
+
+input: 213465
+output: 123456
+
+input: 213546
+output: 123456
+
+input: 213654
+output: 123456
+
+input: 213645
+output: 123456
+
+input: 214356
+output: 123456
+
+input: 214365
+output: 123456
+
+input: 215436
+output: 123456
+
+input: 215346
+output: 123456
+
+input: 216435
+output: 123456
+
+input: 216543
+output: 123456
+
+input: 216534
+output: 123456
+
+input: 216354
+output: 123456
+
+input: 216345
+output: 123456
+
+input: 321456
+output: 123456
+
+input: 321465
+output: 123456
+
+input: 321546
+output: 123456
+
+input: 321654
+output: 123456
+
+input: 321645
+output: 123456
+
+input: 312456
+output: 123456
+
+input: 312465
+output: 123456
+
+input: 312546
+output: 123456
+
+input: 312654
+output: 123456
+
+input: 312645
+output: 123456
+
+input: 421356
+output: 123456
+
+input: 421365
+output: 123456
+
+input: 432156
+output: 123456
+
+input: 432165
+output: 123456
+
+input: 431256
+output: 123456
+
+input: 431265
+output: 123456
+
+input: 413256
+output: 123456
+
+input: 413265
+output: 123456
+
+input: 412356
+output: 123456
+
+input: 412365
+output: 123456
+
+input: 521436
+output: 123456
+
+input: 521346
+output: 123456
+
+input: 532146
+output: 123456
+
+input: 531246
+output: 123456
+
+input: 543216
+output: 123456
+
+input: 543126
+output: 123456
+
+input: 542136
+output: 123456
+
+input: 541236
+output: 123456
+
+input: 541326
+output: 123456
+
+input: 513246
+output: 123456
+
+input: 514326
+output: 123456
+
+input: 514236
+output: 123456
+
+input: 512436
+output: 123456
+
+input: 512346
+output: 123456
+
+input: 621435
+output: 123456
+
+input: 621543
+output: 123456
+
+input: 621534
+output: 123456
+
+input: 621354
+output: 123456
+
+input: 621345
+output: 123456
+
+input: 632154
+output: 123456
+
+input: 632145
+output: 123456
+
+input: 631254
+output: 123456
+
+input: 631245
+output: 123456
+
+input: 643215
+output: 123456
+
+input: 643125
+output: 123456
+
+input: 642135
+output: 123456
+
+input: 641235
+output: 123456
+
+input: 641325
+output: 123456
+
+input: 653214
+output: 123456
+
+input: 653124
+output: 123456
+
+input: 654321
+output: 123456
+
+input: 654312
+output: 123456
+
+input: 654213
+output: 123456
+
+input: 654123
+output: 123456
+
+input: 654132
+output: 123456
+
+input: 652134
+output: 123456
+
+input: 652143
+output: 123456
+
+input: 651423
+output: 123456
+
+input: 651432
+output: 123456
+
+input: 651243
+output: 123456
+
+input: 651234
+output: 123456
+
+input: 651324
+output: 123456
+
+input: 613254
+output: 123456
+
+input: 613245
+output: 123456
+
+input: 614325
+output: 123456
+
+input: 614235
+output: 123456
+
+input: 615432
+output: 123456
+
+input: 615423
+output: 123456
+
+input: 615324
+output: 123456
+
+input: 615234
+output: 123456
+
+input: 615243
+output: 123456
+
+input: 612435
+output: 123456
+
+input: 612543
+output: 123456
+
+input: 612534
+output: 123456
+
+input: 612354
+output: 123456
+
+input: 612345
+output: 123456
+

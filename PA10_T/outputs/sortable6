@@ -1,0 +1,396 @@
+input: 123456
+output: 1
+
+input: 123465
+output: 1
+
+input: 123546
+output: 1
+
+input: 123654
+output: 1
+
+input: 123645
+output: 1
+
+input: 124356
+output: 1
+
+input: 124365
+output: 1
+
+input: 125436
+output: 1
+
+input: 125346
+output: 1
+
+input: 126435
+output: 1
+
+input: 126543
+output: 1
+
+input: 126534
+output: 1
+
+input: 126354
+output: 1
+
+input: 126345
+output: 1
+
+input: 132456
+output: 1
+
+input: 132465
+output: 1
+
+input: 132546
+output: 1
+
+input: 132654
+output: 1
+
+input: 132645
+output: 1
+
+input: 143256
+output: 1
+
+input: 143265
+output: 1
+
+input: 142356
+output: 1
+
+input: 142365
+output: 1
+
+input: 153246
+output: 1
+
+input: 154326
+output: 1
+
+input: 154236
+output: 1
+
+input: 152436
+output: 1
+
+input: 152346
+output: 1
+
+input: 163254
+output: 1
+
+input: 163245
+output: 1
+
+input: 164325
+output: 1
+
+input: 164235
+output: 1
+
+input: 165432
+output: 1
+
+input: 165423
+output: 1
+
+input: 165324
+output: 1
+
+input: 165234
+output: 1
+
+input: 165243
+output: 1
+
+input: 162435
+output: 1
+
+input: 162543
+output: 1
+
+input: 162534
+output: 1
+
+input: 162354
+output: 1
+
+input: 162345
+output: 1
+
+input: 213456
+output: 1
+
+input: 213465
+output: 1
+
+input: 213546
+output: 1
+
+input: 213654
+output: 1
+
+input: 213645
+output: 1
+
+input: 214356
+output: 1
+
+input: 214365
+output: 1
+
+input: 215436
+output: 1
+
+input: 215346
+output: 1
+
+input: 216435
+output: 1
+
+input: 216543
+output: 1
+
+input: 216534
+output: 1
+
+input: 216354
+output: 1
+
+input: 216345
+output: 1
+
+input: 321456
+output: 1
+
+input: 321465
+output: 1
+
+input: 321546
+output: 1
+
+input: 321654
+output: 1
+
+input: 321645
+output: 1
+
+input: 312456
+output: 1
+
+input: 312465
+output: 1
+
+input: 312546
+output: 1
+
+input: 312654
+output: 1
+
+input: 312645
+output: 1
+
+input: 421356
+output: 1
+
+input: 421365
+output: 1
+
+input: 432156
+output: 1
+
+input: 432165
+output: 1
+
+input: 431256
+output: 1
+
+input: 431265
+output: 1
+
+input: 413256
+output: 1
+
+input: 413265
+output: 1
+
+input: 412356
+output: 1
+
+input: 412365
+output: 1
+
+input: 521436
+output: 1
+
+input: 521346
+output: 1
+
+input: 532146
+output: 1
+
+input: 531246
+output: 1
+
+input: 543216
+output: 1
+
+input: 543126
+output: 1
+
+input: 542136
+output: 1
+
+input: 541236
+output: 1
+
+input: 541326
+output: 1
+
+input: 513246
+output: 1
+
+input: 514326
+output: 1
+
+input: 514236
+output: 1
+
+input: 512436
+output: 1
+
+input: 512346
+output: 1
+
+input: 621435
+output: 1
+
+input: 621543
+output: 1
+
+input: 621534
+output: 1
+
+input: 621354
+output: 1
+
+input: 621345
+output: 1
+
+input: 632154
+output: 1
+
+input: 632145
+output: 1
+
+input: 631254
+output: 1
+
+input: 631245
+output: 1
+
+input: 643215
+output: 1
+
+input: 643125
+output: 1
+
+input: 642135
+output: 1
+
+input: 641235
+output: 1
+
+input: 641325
+output: 1
+
+input: 653214
+output: 1
+
+input: 653124
+output: 1
+
+input: 654321
+output: 1
+
+input: 654312
+output: 1
+
+input: 654213
+output: 1
+
+input: 654123
+output: 1
+
+input: 654132
+output: 1
+
+input: 652134
+output: 1
+
+input: 652143
+output: 1
+
+input: 651423
+output: 1
+
+input: 651432
+output: 1
+
+input: 651243
+output: 1
+
+input: 651234
+output: 1
+
+input: 651324
+output: 1
+
+input: 613254
+output: 1
+
+input: 613245
+output: 1
+
+input: 614325
+output: 1
+
+input: 614235
+output: 1
+
+input: 615432
+output: 1
+
+input: 615423
+output: 1
+
+input: 615324
+output: 1
+
+input: 615234
+output: 1
+
+input: 615243
+output: 1
+
+input: 612435
+output: 1
+
+input: 612543
+output: 1
+
+input: 612534
+output: 1
+
+input: 612354
+output: 1
+
+input: 612345
+output: 1
+

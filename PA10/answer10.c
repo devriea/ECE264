@@ -97,7 +97,7 @@ int Stack_pop(Stack * stack)
  */
 void Stack_push(Stack * stack, int value)
 {
-  if(stack == NULL || stack -> list == NULL)
+  if(stack == NULL)
     {
       return;
     }
@@ -158,34 +158,29 @@ void stackSort(int * array, int len)
       return;
     }
   
-  int * myWriteIndex = NULL;
-  myWriteIndex = malloc((sizeof(int) * len) + sizeof(int));
-  
-  if(myWriteIndex == NULL) //Error Checking
-    {
-      return;
-    }
+  //int myWriteIndex[len + 1];
   
   int i = 0;
-  int wIndex = 0; //Index of 0 means nothing had to be taken off
+  int wIndex = -1; //Index of -1 means nothing had to be taken off
   Stack_push(myStack, array[i]);
   i++;
   
-  for(i = 1; i < len; i++)
+  while(i < len)
     {
-      while(!Stack_isEmpty(myStack))
+      while((!Stack_isEmpty(myStack)) && (i < len))
 	{
 	  if(array[i] > stackPeek(myStack))
 	    {
-	      wIndex++;
-	      myWriteIndex[wIndex] = Stack_pop(myStack);
+              wIndex++;
+	      array[wIndex] = Stack_pop(myStack);
 	    }
 	  else
 	    {
 	      Stack_push(myStack, array[i]);
-	      while(wIndex > 0)
+              i++;
+	      while(wIndex > -1)
 		{
-		  Stack_push(myStack, myWriteIndex[wIndex]);
+		  Stack_push(myStack, array[wIndex]);
 		  wIndex--;
 		}
 	    }
@@ -193,9 +188,10 @@ void stackSort(int * array, int len)
       if(Stack_isEmpty(myStack))
 	{
 	  Stack_push(myStack, array[i]);
-	  while(wIndex > 0)
+          i++;
+	  while(wIndex > -1)
 	    {
-	      Stack_push(myStack, myWriteIndex[wIndex]);
+	      Stack_push(myStack, array[wIndex]);
 	      wIndex--;
 	    }
 	}
@@ -203,8 +199,8 @@ void stackSort(int * array, int len)
   
   while(!Stack_isEmpty(myStack))
     {
-      myWriteIndex[wIndex] = Stack_pop(myStack);
       wIndex++;
+      array[wIndex] = Stack_pop(myStack);
     }
 
 }
@@ -227,7 +223,64 @@ void stackSort(int * array, int len)
  */
 int isStackSortable(int * array, int len)
 {
-    return FALSE;
+  if((len <= 0) || (array == NULL))
+    {
+      return FALSE;
+    }
+
+  if(len < 3)
+    {
+      return TRUE;
+    }
+
+  int myMax = array[0];
+  int myMaxInd = 0;
+  int myLeftMax = array[0];
+  int myRightMin = 0;
+  int i = 0;
+
+  for(i = 0; i < len; i++)
+    {
+      if(myMax < array[i])
+	{
+	  myMax = array[i];
+	  myMaxInd = i;
+	}
+    }
+
+  myRightMin = array[myMaxInd];
+  
+  for(i = 0; i < myMaxInd; i++)
+    {
+      if(myLeftMax < array[i])
+	{
+	  myLeftMax = array[i];
+	}
+    }
+  
+  if(myMaxInd == len-1)
+    {
+      myRightMin = myMax;
+    }
+  else
+    {
+      for(i = myMaxInd + 1; i < len; i++)
+	{
+	  if(myRightMin > array[i])
+	    {
+	      myRightMin = array[i];
+	    }
+	}
+    }
+
+  if(myLeftMax > myRightMin)
+    {
+      return TRUE;
+    }
+  else
+    {
+      return FALSE;
+    }
 }
 
 /**
