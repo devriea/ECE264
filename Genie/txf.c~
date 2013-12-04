@@ -1,0 +1,107 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+void format_file(char * myData, char * myOutput)
+{
+  char * myStr1 = "QUOTED-PRINTABLE:";
+  char * myStr2 = "=0D=0A";
+  char * myBegin = NULL;
+  char * myEnd = NULL;
+  myBegin = strstr(myData, myStr1);
+  myEnd = strstr(myData, myStr2);
+
+  strncat(myOutput, &myBegin[17], myEnd - &myBegin[17]);
+  strcat(myOutput, "\n");
+
+  myBegin = &myEnd[6];
+
+  while((strstr(myBegin, myStr2) != NULL) && (strstr(myEnd, myStr2) != NULL))
+    {
+      myEnd = strstr(myBegin, myStr2);
+      strncat(myOutput, myBegin, myEnd - myBegin);
+      strcat(myOutput, "\n");
+      myBegin = &myEnd[6];
+    } 
+}
+
+char * read_File(FILE * fptr, int * myLength)
+{
+  int myArrSize = 0;
+  char c;
+  int i = 0;
+
+  while(fscanf(fptr, "%c", &c) != EOF)
+    {
+      myArrSize++;
+    }
+  
+  char * myData = malloc(myArrSize * sizeof(char));
+  
+  if(myData == NULL)
+    {
+      return NULL;
+    }
+
+  fseek(fptr, 0, SEEK_SET);
+  
+
+  while(fscanf(fptr, "%c", &c) != EOF)
+    {
+      myData[i] = c;
+      i++;
+    }
+
+  *myLength = i;
+
+  return myData;
+}
+
+int main ( int argc , char ** argv )
+{
+  int i = 0; //index
+  char * myData;
+  int myLength = 0;
+
+  //check arguments
+  if (argc != 3)
+    {
+      printf("usage: ./txf <input file> <output file>\n");
+      return EXIT_FAILURE;
+    }
+  
+  //initializing input file
+  FILE * fptr = NULL;
+  fptr = fopen(argv[1], "r");
+  if (fptr == NULL)
+    {
+      printf("File error!\n");
+      return EXIT_FAILURE;
+    }
+
+  myData = read_File(fptr, &myLength);
+  
+  char * myOutput = malloc(myLength * sizeof(char));
+
+  format_file(myData, myOutput);
+  
+  //finilizing the initialization step
+  fclose(fptr);
+  
+  fptr = fopen(argv[2], "w");
+  if (fptr == NULL){
+    printf("output file error\n");
+    return EXIT_FAILURE;
+  }
+
+  while(i < myLength)
+    {
+      fprintf(fptr,"%c",myOutput[i]);
+      i++;
+    }
+
+  free(myData);
+  free(myOutput);
+  fclose(fptr);
+  return EXIT_SUCCESS ;
+}

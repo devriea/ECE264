@@ -161,7 +161,7 @@ void stackSort(int * array, int len)
   //int myWriteIndex[len + 1];
   
   int i = 0;
-  int wIndex = -1; //Index of -1 means nothing had to be taken off
+  int wIndex = 0;
   Stack_push(myStack, array[i]);
   i++;
   
@@ -171,37 +171,29 @@ void stackSort(int * array, int len)
 	{
 	  if(array[i] > stackPeek(myStack))
 	    {
-              wIndex++;
 	      array[wIndex] = Stack_pop(myStack);
+              wIndex++;
 	    }
 	  else
 	    {
 	      Stack_push(myStack, array[i]);
               i++;
-	      while(wIndex > -1)
-		{
-		  Stack_push(myStack, array[wIndex]);
-		  wIndex--;
-		}
 	    }
 	}
       if(Stack_isEmpty(myStack))
 	{
 	  Stack_push(myStack, array[i]);
           i++;
-	  while(wIndex > -1)
-	    {
-	      Stack_push(myStack, array[wIndex]);
-	      wIndex--;
-	    }
 	}
     }
   
   while(!Stack_isEmpty(myStack))
     {
-      wIndex++;
       array[wIndex] = Stack_pop(myStack);
+      wIndex++;
     }
+
+  free(myStack);
 
 }
 
@@ -223,7 +215,7 @@ void stackSort(int * array, int len)
  */
 int isStackSortable(int * array, int len)
 {
-  if((len <= 0) || (array == NULL))
+  if((len < 0) || (array == NULL))
     {
       return FALSE;
     }
@@ -236,7 +228,9 @@ int isStackSortable(int * array, int len)
   int myMax = array[0];
   int myMaxInd = 0;
   int myLeftMax = array[0];
+  int myLeftMaxInd = 0;
   int myRightMin = 0;
+  int myRightMinInd = 0;
   int i = 0;
 
   for(i = 0; i < len; i++)
@@ -249,12 +243,14 @@ int isStackSortable(int * array, int len)
     }
 
   myRightMin = array[myMaxInd];
+  myRightMinInd = myMaxInd;
   
   for(i = 0; i < myMaxInd; i++)
     {
       if(myLeftMax < array[i])
 	{
 	  myLeftMax = array[i];
+	  myLeftMaxInd = i;
 	}
     }
   
@@ -264,18 +260,28 @@ int isStackSortable(int * array, int len)
     }
   else
     {
+      myRightMin = array[myMaxInd + 1];
+      myRightMinInd = myMaxInd + 1;
       for(i = myMaxInd + 1; i < len; i++)
 	{
 	  if(myRightMin > array[i])
 	    {
 	      myRightMin = array[i];
+	      myRightMinInd = i;
 	    }
 	}
     }
 
-  if(myLeftMax > myRightMin)
+  int myMaxIndT = myMaxInd;
+
+  if(myMaxInd != len - 1)
     {
-      return TRUE;
+      myMaxIndT++;
+    }
+
+  if((myLeftMax < myRightMin) || (myMaxInd == 0))
+    {
+      return (isStackSortable(array, myMaxInd) && isStackSortable(&array[myMaxIndT], (len - myMaxInd - 1)));
     }
   else
     {
@@ -298,11 +304,116 @@ int isStackSortable(int * array, int len)
  * The correct outputs for sizes [1..9] are in the 'expected' 
  * directory.
  */
-void genShapes(int k)
+TreeNode * TreeNode_create(int value)
 {
-
+    TreeNode * node = malloc(sizeof(TreeNode));
+    node -> value = value;
+    node -> left = NULL;
+    node -> right = NULL;
+    return node;
 }
 
+TreeNode * Tree_insert(TreeNode * node, int value)
+{
+    if(node == NULL)
+	return TreeNode_create(value);
+    if(value < node -> value)
+	node -> left = Tree_insert(node -> left, value);
+    if(value > node -> value)
+	node -> right = Tree_insert(node -> right, value);
+    // If they're equal, then we have nothing to do...
+    return node;
+}
 
+TreeNode * Tree_build(int * array, int len)
+{
+    TreeNode * root = NULL;
+    int i;
+    for(i = 0; i < len; ++i)
+	root = Tree_insert(root, array[i]);
+    return root;
+}
 
+void Tree_destroy(TreeNode * node)
+{
+    if(node == NULL)
+	return;
+    Tree_destroy(node -> left);
+    Tree_destroy(node -> right);
+    free(node);
+}
 
+void Tree_printShapeHelper(TreeNode * node)
+{
+    if(node == NULL)
+	return;
+    if(node -> left != NULL) {
+	printf("(");
+	Tree_printShapeHelper(node -> left);
+	printf(")");
+    }
+    printf("%d", node -> value);
+    if(node -> right != NULL) {
+	printf("(");
+	Tree_printShapeHelper(node -> right);
+	printf(")");
+    }
+}
+
+/**
+ * This function is given to you:
+ */
+void Tree_printShape(TreeNode * node)
+{
+    Tree_printShapeHelper(node);
+    printf("\n");
+}
+
+void swap(int * array, int i, int j)
+{
+  int temp = array[i];
+  array[i] = array[j];
+  array[j] = temp;
+}
+
+void permutate(int * array, int myInd, int len)
+{
+  if(myInd == len)
+    {
+      if(isStackSortable(array, len))
+	{
+	  TreeNode * myTree = Tree_build(array, len);
+	  Tree_printShape(myTree);
+	  Tree_destroy(myTree);
+	} 
+      return;
+    }
+
+  int i = 0;
+
+  for(i = myInd; i < len; i++)
+    {
+      swap(array, myInd, i);
+      permutate(array, myInd + 1, len);
+      swap(array, myInd, i);
+    }
+}
+void genShapes(int k)
+{
+  if(k < 1)
+    {
+      return;
+    }
+  
+  int i = 0;
+  int myArray[k];
+
+  for(i = 0; i < k; i++)
+    {
+      myArray[i] = i;
+    }
+
+  permutate(myArray, 0, k);
+
+  return;
+}
